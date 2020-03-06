@@ -1,0 +1,169 @@
+import os
+import sys
+from django.core.wsgi import get_wsgi_application
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "elitemanga.settings.dev")
+application = get_wsgi_application()
+
+import lxml
+from bs4 import BeautifulSoup
+import requests
+from datetime import datetime
+import concurrent.futures
+import threading
+from backend.models import Chapter, Manga, MangaTag
+
+# from django.utils.timezone import make_aware
+import time
+
+
+# Create your views here.
+months = {
+    "Jan": "01",
+    "Feb": "02",
+    "Mar": "03",
+    "Apr": "04",
+    "May": "05",
+    "Jun": "06",
+    "Jul": "07",
+    "Aug": "08",
+    "Sep": "09",
+    "Oct": "10",
+    "Nov": "11",
+    "Dec": "12",
+}
+# thread_local = threading.local()
+
+
+# def get_session():
+#     if not hasattr(thread_local, "session"):
+#         thread_local.session = requests.Session()
+#     return thread_local.session
+
+
+chapters_list = []
+manga_link = "https://manganelo.com/manga/read_boku_no_hero_academia_manga"
+manga = requests.get(manga_link)
+manga = BeautifulSoup(manga.content, "lxml")
+title = manga.find("h1").get_text()
+alias = title.lower().replace(" ", "-")
+
+
+def download_chapter(chapter):
+    global alias
+    session = requests.Session()
+    chapter_title = chapter.text
+    number = chapter["href"].split("_").pop()
+
+    # get chapter time uploaded
+    time_uploaded = chapter.next_sibling.next_sibling.next_sibling.next_sibling["title"]
+    month_value = months[time_uploaded[:3]]
+    time_uploaded = time_uploaded[3:]
+    time_uploaded = str(month_value) + time_uploaded
+    time_uploaded = datetime.strptime(time_uploaded, "%m %d,%Y %H:%M")
+    # time_uploaded = make_aware(time_uploaded)
+    # get pages
+    page = session.get(chapter["href"])
+    page = BeautifulSoup(page.content, "lxml")
+    page = page.find(class_="container-chapter-reader")
+    page = page.find_all("img")
+    pages = []
+    for image in page:
+        pages.append(image["src"])
+    Chapter.objects.get_or_create(
+        number=number,
+        date_uploaded=time_uploaded,
+        title=chapter_title,
+        pages=pages,
+        manga=Manga.objects.get(alias=alias, manga_type=0),
+        manga_alias=alias,
+        chapter_type=0,
+    )
+    value = {
+        "title": chapter_title,
+        "number": number,
+        "time_uploaded": time_uploaded,
+        "pages": pages,
+    }
+    print(value)
+
+    chapters_list.append(value)
+
+
+def scrapeManga(manga):
+    # get image
+    manga_image = manga.find(class_="info-image").img
+    manga_image = manga_image["src"]
+    # title and alternative names
+    title = manga.find("h1").get_text()
+    print(title)
+    info = manga.find_all(class_="table-value")
+    other_names = info[0].get_text()
+    author = info[1].get_text().strip("\n")
+    status = info[2].get_text()
+    if status == "ongoing":
+        status = 1
+    if status == "finished":
+        status = 0
+    tags = info[3].get_text().strip("\n")
+    tags = tags.split("-")
+    # time and last_updated
+    info2 = manga.find_all("span", class_="stre-value")
+    last_updated = info2[0].get_text()
+    month_value = months[last_updated[:3]]
+    last_updated = last_updated[3:]
+    last_updated = str(month_value) + last_updated
+    last_updated = datetime.strptime(last_updated, "%m %d,%Y - %H:%M %p")
+    # last_updated = make_aware(last_updated)
+    hits = int(info2[1].get_text().replace(",", ""))
+    description = manga.find("div", class_="panel-story-info-description")
+    description = description.contents[5].get_text() + description.contents[6].strip(
+        "\n"
+    )
+    alias = title.lower().replace(" ", "-")
+    manga_type = 0
+    chapters = manga.find_all(class_="chapter-name")
+    chapters.reverse()
+    chapters_len = len(chapters)
+    # Manga.objects.get_or_create(
+    #     manga_type=manga_type,
+    #     chapters_length=chapters_len,
+    #     author=author,
+    #     last_updated=last_updated,
+    #     title=title,
+    #     description=description,
+    #     hits=hits,
+    #     other_names=other_names,
+    #     alias=alias,
+    #     status=status,
+    #     image_url=manga_image,
+    # )
+    # for tag in tags:
+    #     Manga.objects.get(alias=alias, manga_type=0).tags.add(
+    #         MangaTag.objects.get_or_create(name=tag)[0]
+    #     )
+    # get chapters and pages
+    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+        executor.map(download_chapter, chapters)
+    manga_value = {
+        "title": title,
+        "image_url": manga_image,
+        "other_names": other_names,
+        "chapters_length": chapters_len,
+        "author": author,
+        "status": status,
+        "tags": tags,
+        "last_updated": last_updated,
+        "hits": hits,
+        "alias": alias,
+        "description": description,
+    }
+
+    return manga_value
+
+
+start_time = time.time()
+mangaobject = scrapeManga(manga)
+duration = time.time() - start_time
+print(f"Downloaded all in {duration} seconds")
+print(chapters_list)
