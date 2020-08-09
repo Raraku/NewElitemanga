@@ -9,3 +9,4 @@ integration:
 -Favorites
 -User Customization
 -summernote
+start cloud_sql_proxy -instances=elitemanga-79e49:us-central1:elitemanga-database-01=tcp:3306

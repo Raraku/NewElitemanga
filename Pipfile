@@ -43,6 +43,11 @@ bs4 = "*"
 lxml = "*"
 djangorestframework-bulk = "*"
 gunicorn = "*"
+pillow = "*"
+django-storages = "*"
+google-cloud-storage = "*"
+python-memcached = "*"
+django-admin-ordering = "*"
 
 [requires]
 python_version = "3.7"

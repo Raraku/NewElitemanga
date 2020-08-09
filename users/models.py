@@ -54,6 +54,21 @@ class User(AbstractUser):
 
 
 class Profile(models.Model):
-    MODE = (("0", "Day"), ("1", "Night"))
+    LEVELS = (("0", "Initiate"),)
+    username = models.CharField(max_length=80)
+    level = models.CharField(max_length=80, choices=LEVELS, default=LEVELS[0][0])
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    display_mode = models.CharField(choices=MODE, default=MODE[0], max_length=34)
+    avatar = models.ImageField(blank=True, null=True, upload_to="profile-avatars")
+    avatar_thumbnail = models.ImageField(
+        upload_to="product-thumbnails", null=True, blank=True
+    )
+    date_joined = models.DateField(auto_now_add=True)
+
+    def __str__(self):
+        return self.username + "'s profile"
+
+    # def check_level(self):
+    #     profile = self.get_object()
+    #     highest=profile.user.review_set.order_by('-likes')[0]
+    #     if highest.likes > 100 < 200:
+    #         self.level

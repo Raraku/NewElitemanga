@@ -2,28 +2,56 @@ from rest_framework.routers import DefaultRouter
 from .viewsets import (
     MangainfoViewSet,
     MangaViewSet,
-    UserMangaViewSet,
-    UserMangaPingViewset,
-    UserMangaStateViewset,
-    ChapterViewSet,
+    # UserMangaViewSet,
+    # UserMangaPingViewset,
+    # UserMangaStateViewset,
     MangaSearchViewSet,
-    addManganeloChapter,
+    AnimeinfoViewSet,
+    AnimeViewSet,
+    AnimeSearchViewSet,
+    AddReview,
+    ProfileView,
+    MixedViewSetOperations,
     addManganeloManga,
+    vote,
+    devote,
+    AddComment,
+    ListViewset,
+    get_review_comments,
+    WeeklyMediaReset,
+    MixedinfoViewSet,
+    ProfileImageView,
+    AnnouncementViewset,
 )
+from .mal.specops import updateUpcomingAnime
 from django.urls import path
+from .views import verify_email
 
 
 router = DefaultRouter()
 router.register(r"mangainfo", MangainfoViewSet, "mangainfo")
-router.register(r"manga", MangaViewSet)
-router.register(r"chapterlist", ChapterViewSet, base_name="chapterlist")
-router.register(r"usermanga", UserMangaViewSet, base_name="usermanga")
-router.register(r"ping", UserMangaPingViewset, base_name="ping")
-router.register(r"usermangastate", UserMangaStateViewset, base_name="usermangastate")
-router.register(r"mangasearch", MangaSearchViewSet)
+router.register(r"manga", MangaViewSet, "manga")
+router.register(r"mixed", MixedViewSetOperations, "mixed")
+router.register(r"mixedinfo", MixedinfoViewSet, "mixedinfo")
+router.register(r"user-review", AddReview)
+router.register(r"mangasearch", MangaSearchViewSet, "mangasearch")
+router.register(r"animeinfo", AnimeinfoViewSet, "animeinfo")
+router.register(r"anime", AnimeViewSet, "anime")
+router.register(r"announcement", AnnouncementViewset, "announcements")
+router.register(r"user-review", AddReview)
+router.register(r"lists", ListViewset)
+router.register(r"animesearch", AnimeSearchViewSet, "animesearch")
 urlpatterns = [
     path("add-manganelo-manga/", addManganeloManga),
-    path("add-manganelo-chapter/", addManganeloChapter),
+    path("vote-review/<int:pk>/", vote),
+    path("devote-review/<int:pk>/", devote),
+    path("review-comment/<int:pk>/", get_review_comments),
+    path("profile/", ProfileView.as_view()),
+    path("profile-upload/", ProfileImageView.as_view()),
+    path("reset-manga-weekly/", WeeklyMediaReset),
+    path("verify-email/", verify_email),
+    path("update_upcoming/", updateUpcomingAnime)
+    # path("add-manganelo-chapter/", addManganeloChapter),
 ]
 
 urlpatterns += router.urls
