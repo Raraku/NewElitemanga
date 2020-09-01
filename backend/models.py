@@ -17,6 +17,7 @@ from PIL import Image
 from django.core.files.base import ContentFile
 from taggit.managers import TaggableManager
 from taggit.models import ItemBase, TagBase
+from django.core.validators import MaxValueValidator, MinValueValidator
 
 
 class MyCustomTag(TagBase):
@@ -105,13 +106,16 @@ class Media(models.Model):
     scanlator_2 = models.URLField(blank=True, null=True)
     media_type = models.CharField(max_length=32, choices=MEDIA_TYPE)
     tags = TaggableManager()
+    adaptation = models.OneToOneField(
+        "self", on_delete=models.CASCADE, blank=True, null=True
+    )
     weekly_reads = models.IntegerField(default=0)
 
     class Meta:
         ordering = ["-hits"]
 
     def __str__(self):
-        return self.title
+        return self.title + " " + str(self.media_type)
 
     def save(self, *args, **kwargs):
         if self.pre_image_url and not self.image_url:
@@ -165,14 +169,38 @@ class ListSection(models.Model):
 
 
 class ElitemangaReview(models.Model):
-    originality = models.TextField(blank=True, null=True)
-    originality_score = models.IntegerField(default=0)
-    plot = models.TextField(blank=True, null=True)
-    plot_score = models.IntegerField(default=0)
-    characters = models.TextField(blank=True, null=True)
-    characters_score = models.IntegerField(default=0)
-    quality = models.TextField(blank=True, null=True)
-    quality_score = models.IntegerField(default=0)
+    moment = models.TextField(
+        blank=True,
+        null=True,
+        default="<p><b>Presentation:</b></p><p><b>Consistency:</b></p><p><b>Predictability:</b></p><p><b>Effort:</b></p><p><b>Main Genre of Moments:</b></p><p><b><br></b></p>",
+    )
+    moment_score = models.IntegerField(
+        default=0, validators=[(MinValueValidator(0)), MaxValueValidator(10)]
+    )
+    plot = models.TextField(
+        blank=True,
+        null=True,
+        default='<p><span style="font-weight: 700;">Realism:</span></p><p><span style="font-weight: 700;">Premise:</span></p><p><span style="font-weight: 700;">Pacing:</span></p><p><span style="font-weight: 700;">Complexity:</span></p><p><span style="font-weight: 700;">Immersion:</span></p><p><span style="font-weight: 700;">Conclusion:</span></p>',
+    )
+    plot_score = models.IntegerField(
+        default=0, validators=[(MinValueValidator(0)), MaxValueValidator(10)]
+    )
+    characters = models.TextField(
+        blank=True,
+        null=True,
+        default="<p><b>Personality:</b></p><p><b>Chemistry:</b></p><p><b>Backdrop:</b></p><p><b>Likability:</b></p><p><b>Development:</b></p>",
+    )
+    characters_score = models.IntegerField(
+        default=0, validators=[(MinValueValidator(0)), MaxValueValidator(10)]
+    )
+    quality = models.TextField(
+        blank=True,
+        null=True,
+        default="<p><b>Sound:</b></p><p><b>Voice Acting:</b></p><p><b>Art style:</b></p><p><b>Animation Quality:</b></p>",
+    )
+    quality_score = models.IntegerField(
+        default=0, validators=[MinValueValidator(0), MaxValueValidator(10)]
+    )
     remark = models.TextField(blank=True, null=True)
     total_score = models.IntegerField(blank=True, null=True)
     media_review = models.OneToOneField(
@@ -181,7 +209,7 @@ class ElitemangaReview(models.Model):
 
     def save(self, *args, **kwargs):
         self.total_score = (
-            self.originality_score
+            self.moment_score
             + self.plot_score
             + self.characters_score
             + self.quality_score
@@ -194,7 +222,7 @@ class Review(models.Model):
     media = models.ForeignKey(Media, on_delete=models.CASCADE, blank=True, null=True)
     content = models.TextField()
     created = models.DateField(auto_now_add=True)
-    originality_score = models.IntegerField(default=0)
+    moment_score = models.IntegerField(default=0)
     plot_score = models.IntegerField(default=0)
     characters_score = models.IntegerField(default=0)
     quality_score = models.IntegerField(default=0)
@@ -231,3 +259,17 @@ class Announcement(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Campaign(models.Model):
+    title = models.CharField(max_length=70)
+    is_active = models.BooleanField(default=False)
+
+
+class Referral(models.Model):
+    campaign = models.ForeignKey(Campaign, on_delete=models.CASCADE)
+    owner = models.ForeignKey(Profile, on_delete=models.CASCADE)
+    referrals = models.ManyToManyField(
+        Profile, related_name="referred", blank=True, related_query_name="referred"
+    )
+

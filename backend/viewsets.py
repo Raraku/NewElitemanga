@@ -7,6 +7,7 @@ from rest_framework.parsers import (
     JSONParser,
     FileUploadParser,
 )
+from django.utils.decorators import method_decorator
 import random
 from django.views.decorators.cache import cache_page, never_cache
 from django.views.decorators.vary import vary_on_cookie
@@ -25,7 +26,16 @@ from rest_framework.permissions import (
 )
 from rest_framework.pagination import PageNumberPagination, LimitOffsetPagination
 from rest_framework import status
-from .models import Media, Review, Comment, ReviewVote, List, Announcement
+from .models import (
+    Media,
+    Review,
+    Comment,
+    ReviewVote,
+    List,
+    Announcement,
+    Referral,
+    Campaign,
+)
 from users.models import Profile
 from .serializers import (
     MediainfoSerializer,
@@ -34,6 +44,7 @@ from .serializers import (
     AnnouncementMassSerializer,
     ReviewAloneAuthSerializer,
     ReviewAuthenticatedSerializer,
+    ReferralSerializer,
     MediaSerializer,
     # ChapterpageSerializer,
     # UserMangaSerializer,
@@ -494,6 +505,7 @@ class AnnouncementViewset(ReadOnlyModelViewSet):
         return Response(serializer.data, status=status.HTTP_200_OK)
 
 
+@method_decorator(never_cache, name="dispatch")
 class AddReview(ModelViewSet):
     serializer_class = ReviewAloneSerializer
     queryset = Review.objects.all()
@@ -529,13 +541,21 @@ class AddReview(ModelViewSet):
             return Response(status=status.HTTP_400_BAD_REQUEST)
 
 
+class ReferralViewSet(ReadOnlyModelViewSet):
+    serializer_class = ReferralSerializer
+    queryset = Referral.objects.all()
+    permission_classes = [IsAuthenticatedOrReadOnly]
+
+
 class AddComment(generics.ListCreateAPIView):
     serializer_class = CommentSerializer
     queryset = Comment.objects.all()
     permission_classes = [IsAuthenticatedOrReadOnly]
 
 
+@method_decorator(never_cache, name="dispatch")
 class ProfileView(generics.RetrieveUpdateAPIView):
+
     serializer_class = ProfileSerializer
     queryset = Profile.objects.all()
     permission_classes = [IsUserOrReadOnly]
@@ -571,12 +591,13 @@ class ProfileImageView(generics.RetrieveUpdateAPIView):
     parser_class = (FileUploadParser,)
 
     def patch(self, request, *args, **kwargs):
-        file_serializer = ProfileImageSerializer(data=request.data)
-        if file_serializer.is_valid():
-            file_serializer.save()
-            return Response(file_serializer.data, status=status.HTTP_201_CREATED)
-        else:
-            return Response(file_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        self.partial_update(request, *args, **kwargs)
+        # file_serializer = ProfileImageSerializer(data=request.data, partial=True)
+        # if file_serializer.is_valid():
+        #     file_serializer.save()
+        return Response(status=status.HTTP_201_CREATED)
+        # else:
+        #     return Response(file_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     def get_object(self):
         """
@@ -607,6 +628,31 @@ def get_review_comments(request, pk):
     queryset = Comment.objects.filter(review=review)
     serializer = CommentSerializer(queryset, many=True)
     return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+@never_cache
+@api_view(["GET"])
+def create_increase_referral(request, username_no):
+    campaign = Campaign.objects.get(is_active=True)
+    owner = Profile.objects.get(slug=username_no)
+    referred = Profile.objects.get(user=request.user)
+    if owner == referred:
+        return Response(
+            status=status.HTTP_403_FORBIDDEN,
+            data={"error": "You can't invite yourself"},
+        )
+    if referred.is_referred == True:
+        return Response(
+            status=status.HTTP_403_FORBIDDEN,
+            data={"error": "You have already acknowledged an invitation"},
+        )
+
+    referral = Referral.objects.get_or_create(campaign=campaign, owner=owner)[
+        0
+    ].referrals.add(referred)
+    referred.is_referred = True
+    referred.save()
+    return Response(status=status.HTTP_200_OK, data={"user": owner.username})
 
 
 @api_view(["GET"])

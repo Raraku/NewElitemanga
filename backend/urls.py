@@ -21,7 +21,9 @@ from .viewsets import (
     WeeklyMediaReset,
     MixedinfoViewSet,
     ProfileImageView,
+    ReferralViewSet,
     AnnouncementViewset,
+    create_increase_referral,
 )
 from .mal.specops import updateUpcomingAnime
 from django.urls import path
@@ -39,6 +41,7 @@ router.register(r"animeinfo", AnimeinfoViewSet, "animeinfo")
 router.register(r"anime", AnimeViewSet, "anime")
 router.register(r"announcement", AnnouncementViewset, "announcements")
 router.register(r"user-review", AddReview)
+# router.register(r"invites", ReferralViewSet)
 router.register(r"lists", ListViewset)
 router.register(r"animesearch", AnimeSearchViewSet, "animesearch")
 urlpatterns = [
@@ -46,6 +49,7 @@ urlpatterns = [
     path("vote-review/<int:pk>/", vote),
     path("devote-review/<int:pk>/", devote),
     path("review-comment/<int:pk>/", get_review_comments),
+    path("invites/<str:username_no>/", create_increase_referral),
     path("profile/", ProfileView.as_view()),
     path("profile-upload/", ProfileImageView.as_view()),
     path("reset-manga-weekly/", WeeklyMediaReset),

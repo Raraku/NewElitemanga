@@ -6,7 +6,7 @@ from io import BytesIO
 from PIL import Image
 from django.core.files.base import ContentFile
 
-THUMBNAIL_SIZE = (50, 50)
+THUMBNAIL_SIZE = (100, 100)
 
 
 @receiver(post_save, sender=AUTH_USER_MODEL)

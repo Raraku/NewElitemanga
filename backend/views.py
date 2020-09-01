@@ -8,6 +8,22 @@ from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from rest_framework import status
 from users.models import Profile, User
+from rest_auth.registration.views import SocialConnectView
+from allauth.socialaccount.providers.facebook.views import FacebookOAuth2Adapter
+from allauth.socialaccount.providers.google.views import GoogleOAuth2Adapter
+from rest_auth.registration.views import SocialLoginView
+from allauth.account.models import EmailAddress
+from django.contrib import messages
+from allauth.account.adapter import get_adapter
+
+
+class FacebookLogin(SocialLoginView):
+    adapter_class = FacebookOAuth2Adapter
+
+
+class GoogleLogin(SocialLoginView):
+    adapter_class = GoogleOAuth2Adapter
+
 
 # Create your views here.
 
@@ -23,3 +39,22 @@ def verify_email(request):
     ]
     send_mail(subject, message, email_from, recipient_list)
     return Response(status=status.HTTP_200_OK)
+
+
+@api_view(["get"])
+def action_send(request):
+    email = request.user.email
+    print(email)
+    try:
+        email_address = EmailAddress.objects.get(user=request.user, email=email,)
+        get_adapter(request).add_message(
+            request,
+            messages.INFO,
+            "account/messages/" "email_confirmation_sent.txt",
+            {"email": email},
+        )
+        email_address.send_confirmation(request)
+
+        return Response(status=status.HTTP_200_OK)
+    except Exception as exc:
+        return Response(status=status.HTTP_400_BAD_REQUEST)

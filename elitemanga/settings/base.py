@@ -6,6 +6,7 @@ DEBUG = False
 ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
+    # "jet",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -18,6 +19,7 @@ INSTALLED_APPS = [
     "allauth.account",
     "allauth.socialaccount",
     "allauth.socialaccount.providers.facebook",
+    "allauth.socialaccount.providers.google",
     "allauth.socialaccount.providers.twitter",
     "corsheaders",
     "rest_auth",
@@ -29,11 +31,13 @@ INSTALLED_APPS = [
     "users.apps.UsersConfig",
     "rest_framework_bulk",
     "taggit",
+    "django_summernote",
 ]
 
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.cache.UpdateCacheMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -49,7 +53,7 @@ ROOT_URLCONF = "elitemanga.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [os.path.join(BASE_DIR)],
+        "DIRS": [os.path.join(BASE_DIR) + "/backend/templates",],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -102,4 +106,10 @@ ACCOUNT_AUTHENTICATION_METHOD = "email"
 ACCOUNT_EMAIL_VERIFICATION = "none"
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 ACCOUNT_CONFIRM_EMAIL_ON_GET = True
+
+AUTHENTICATION_BACKENDS = (
+    "django.contrib.auth.backends.ModelBackend",
+    "allauth.account.auth_backends.AuthenticationBackend",
+)
+LOGIN_REDIRECT_URL = "/"
 

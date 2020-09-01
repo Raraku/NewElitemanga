@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "elitemanga.settings.prod")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "elitemanga.settings.prod_heroku")
 
 application = get_wsgi_application()

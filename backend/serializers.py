@@ -11,10 +11,13 @@ from .models import (
     SourceLink,
     ReviewVote,
     Announcement,
+    Campaign,
+    Referral,
 )
 from users.models import Profile
 import json
 from taggit.models import Tag
+from allauth.account.models import EmailAddress
 
 
 class ChoiceField(serializers.ChoiceField):
@@ -32,8 +35,8 @@ class ElitemangaReviewSerializer(serializers.ModelSerializer):
     class Meta:
         model = ElitemangaReview
         fields = [
-            "originality",
-            "originality_score",
+            "moment",
+            "moment_score",
             "plot",
             "plot_score",
             "characters",
@@ -44,8 +47,8 @@ class ElitemangaReviewSerializer(serializers.ModelSerializer):
             "total_score",
         ]
         read_only_fields = [
-            "originality",
-            "originality_score",
+            "moment",
+            "moment_score",
             "plot",
             "plot_score",
             "characters",
@@ -125,11 +128,19 @@ class ThroughSourceSerializer(serializers.ModelSerializer):
         fields = ("link", "official", "name", "homepage", "image", "description")
 
 
+class MediaAdaptSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Media
+        fields = ["title", "alias"]
+
+
 class MediaSerializer(serializers.ModelSerializer):
     tags = serializers.StringRelatedField(many=True)
     rank = ChoiceField(choices=Media.RANK)
     elitemangareview = ElitemangaReviewSerializer()
     sources = ThroughSourceSerializer(source="sourcelink_set", many=True)
+    adaptation = MediaAdaptSerializer()
+    media = MediaAdaptSerializer()
 
     class Meta:
         model = Media
@@ -148,9 +159,11 @@ class MediaSerializer(serializers.ModelSerializer):
             "rank",
             "other_names",
             "status",
+            "media",
             "hits",
             "weekly_reads",
             "media_type",
+            "adaptation",
         ]
         read_only_fields = [
             "author",
@@ -158,6 +171,7 @@ class MediaSerializer(serializers.ModelSerializer):
             "chapters_length",
             "title",
             "id",
+            "media",
             "image_url",
             "elitemangareview",
             "rank",
@@ -165,25 +179,67 @@ class MediaSerializer(serializers.ModelSerializer):
             "tags",
             "media_type",
             "image_url",
+            "adaptation",
             "other_names",
             "status",
             "hits",
         ]
 
 
+class CampaignSerializer(serializers.ModelSerializer):
+    referrals = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Campaign
+        fields = ["title", "referrals", "is_active"]
+
+    def get_referrals(self, obj):
+        profile = Profile.objects.get(user=self.context["request"].user)
+        return obj.referral_set.filter(owner=profile).count()
+
+
 class ProfileSerializer(serializers.ModelSerializer):
+    verified = serializers.SerializerMethodField()
+    past_campaigns = serializers.SerializerMethodField()
+
     class Meta:
         model = Profile
-        fields = ["level", "avatar", "username", "date_joined"]
-        read_only_fields = [
+        fields = [
             "level",
+            "avatar",
+            "social_avatar",
+            "avatar_thumbnail",
+            "slug",
+            "username",
+            "date_joined",
+            "verified",
+            "past_campaigns",
         ]
+        read_only_fields = ["level"]
+
+    def get_verified(self, obj):
+
+        queryset = EmailAddress.objects.get(user=self.context["request"].user)
+        return queryset.verified
+
+    def get_past_campaigns(self, obj):
+        queryset = Campaign.objects.all()
+        serialzer = CampaignSerializer(
+            queryset, context={"request": self.context["request"]}, many=True
+        )
+        return serialzer.data
+
+
+class ReferralSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Referral
+        fields = ["owner", "referrals"]
 
 
 class ProfileImageSerializer(serializers.ModelSerializer):
     class Meta:
         model = Profile
-        fields = ["avatar, username"]
+        fields = ["avatar", "username"]
 
 
 class CommentSerializer(serializers.ModelSerializer):
@@ -211,7 +267,7 @@ class ReviewAuthenticatedSerializer(serializers.ModelSerializer):
             "comment_number",
             "comment_set",
             "is_liked",
-            "originality_score",
+            "moment_score",
             "plot_score",
             "characters_score",
             "quality_score",
@@ -262,7 +318,7 @@ class ReviewSerializer(serializers.ModelSerializer):
             "id",
             "comment_number",
             "comment_set",
-            "originality_score",
+            "moment_score",
             "plot_score",
             "characters_score",
             "quality_score",
@@ -298,7 +354,7 @@ class ReviewAloneSerializer(serializers.ModelSerializer):
             "comment_number",
             "comment_set",
             "media",
-            "originality_score",
+            "moment_score",
             "plot_score",
             "characters_score",
             "quality_score",
@@ -336,7 +392,7 @@ class ReviewAloneAuthSerializer(serializers.ModelSerializer):
             "comment_set",
             "is_liked",
             "media",
-            "originality_score",
+            "moment_score",
             "plot_score",
             "characters_score",
             "quality_score",

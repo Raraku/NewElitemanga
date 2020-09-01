@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser, PermissionsMixin, BaseUserManager
 from django.contrib.auth.validators import UnicodeUsernameValidator
+from django.utils.text import slugify
 
 # Create your models here.
 
@@ -62,6 +63,9 @@ class Profile(models.Model):
     avatar_thumbnail = models.ImageField(
         upload_to="product-thumbnails", null=True, blank=True
     )
+    social_avatar = models.URLField(blank=True, null=True)
+    is_referred = models.BooleanField(default=False)
+    slug = models.SlugField(blank=True)
     date_joined = models.DateField(auto_now_add=True)
 
     def __str__(self):
@@ -72,3 +76,6 @@ class Profile(models.Model):
     #     highest=profile.user.review_set.order_by('-likes')[0]
     #     if highest.likes > 100 < 200:
     #         self.level
+    def save(self, *args, **kwargs):
+        self.slug = slugify(str(self.username)) + "-" + str(self.pk * 3000)
+        super(Profile, self).save(*args, **kwargs)

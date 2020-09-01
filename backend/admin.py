@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django import forms
 from .models import (
     Media,
     Review,
@@ -12,10 +13,13 @@ from .models import (
     Source,
     SourceLink,
     Announcement,
+    Referral,
+    Campaign,
 )
 from admin_ordering.admin import OrderableAdmin
 from users.models import User
 from django.contrib.sessions.models import Session
+from django_summernote.widgets import SummernoteWidget
 
 
 # Register your models here.
@@ -51,6 +55,16 @@ class ListAdmin(admin.ModelAdmin):
 class ElitemngaReviewInline(admin.StackedInline):
     model = ElitemangaReview
 
+    def formfield_for_dbfield(self, db_field, *args, **kwargs):
+        items = ["moment", "characters", "plot", "quality"]
+        if db_field.name in items:
+            kwargs["widget"] = SummernoteWidget()
+            kwargs.pop("request")
+            return db_field.formfield(**kwargs)
+        return super(ElitemngaReviewInline, self).formfield_for_dbfield(
+            db_field, **kwargs
+        )
+
 
 # class UserChapterInline(admin.TabularInline):
 #     model = UserManga.chapters.through
@@ -64,10 +78,15 @@ class AnnouncementAdmin(admin.ModelAdmin):
 
 class MediaAdmin(admin.ModelAdmin):
     list_display = ("title", "rank", "hits", "media_type", "weekly_reads")
-    list_filter = ("media_type", "rank", "author", "status")
+    list_filter = ("media_type", "rank", "author", "status", "reviewed")
     search_fields = ("title", "keywords")
     prepopulated_fields = {"slug": ("title",)}
     inlines = [SourceLinkInline, ElitemngaReviewInline]
+
+    # def formfield_for_manytomany(self, db_field, request, **kwargs):
+    #     if db_field.name == "adaptation":
+    #         kwargs["queryset"] = Media.objects.filter(media_type=1)
+    #         return Super().formfield_for_manytomany(db_field, request, **kwargs)
 
 
 class TagAdmin(admin.ModelAdmin):
@@ -84,6 +103,8 @@ class TagAdmin(admin.ModelAdmin):
 
 admin.site.register(Session)
 admin.site.register(User)
+admin.site.register(Referral)
+admin.site.register(Campaign)
 admin.site.register(MyCustomTag, TagAdmin)
 admin.site.register(List, ListAdmin)
 admin.site.register(ElitemangaReview)

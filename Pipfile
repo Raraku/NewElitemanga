@@ -48,6 +48,13 @@ django-storages = "*"
 google-cloud-storage = "*"
 python-memcached = "*"
 django-admin-ordering = "*"
+djoser = "*"
+django-summernote = "*"
+django-admin-tools = "*"
+django-jet = "*"
+whitenoise = "*"
+dj-database-url = "*"
+django-heroku = "*"
 
 [requires]
 python_version = "3.7"
