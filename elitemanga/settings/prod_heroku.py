@@ -49,4 +49,4 @@ CSRF_TRUSTED_ORIGINS = [
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "build", "media")
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-django_heroku.settings(locals(), logging=False)
+django_heroku.settings(locals(), logging=False, staticfiles=False)
