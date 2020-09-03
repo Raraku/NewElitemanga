@@ -2,6 +2,7 @@ import json
 import scraper
 import concurrent.futures
 import threading
+from animelinks import current_links
 
 donemanga = []
 tobedonemanga = []
@@ -9,9 +10,7 @@ tobedonemanga = []
 with open("doneanime.json", "r") as target:
     donemanga = json.load(target)
 
-current_links = [
-    "https://myanimelist.net/anime/21/One_Piece",
-]
+
 for link in current_links:
     if link in donemanga:
         pass

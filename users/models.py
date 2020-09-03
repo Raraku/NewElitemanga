@@ -77,5 +77,5 @@ class Profile(models.Model):
     #     if highest.likes > 100 < 200:
     #         self.level
     def save(self, *args, **kwargs):
-        self.slug = slugify(str(self.username)) + "-" + str(self.pk * 3000)
+        self.slug = slugify(str(self.username))
         super(Profile, self).save(*args, **kwargs)

@@ -43,7 +43,7 @@ def scraper(manga_link):
 
     def scrapeManga(manga):
         # get image
-        title = manga.find(itemprop="name").get_text()
+        title = manga.find(itemprop="name").find(_class="").get_text()
         alias = title.lower().replace(" ", "-")
         manga_image = manga.find(itemprop="image")
         manga_image = manga_image["data-src"]

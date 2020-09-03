@@ -762,7 +762,7 @@ def addManganeloManga(request):
             other_names=manga["other_names"],
             alias=manga["alias"],
             status=manga["status"],
-            image_url=manga["image_url"],
+            pre_image_url=manga["image_url"],
             media_type=manga["media_type"],
         )
     for tag in manga["tags"]:
