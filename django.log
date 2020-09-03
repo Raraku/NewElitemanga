@@ -871,3 +871,53 @@ NotADirectoryError: [WinError 267] The directory name is invalid: 'E:\\Programmi
 2020-09-03 15:50:13 [INFO    ] (basehttp.log_message) "GET /media/media-images/detective-conan_i5gCjWN.png HTTP/1.1" 304 0
 2020-09-03 15:50:14 [WARNING ] (log.log_response) Not Found: /favicon.ico
 2020-09-03 15:50:14 [WARNING ] (basehttp.log_message) "GET /favicon.ico HTTP/1.1" 404 30011
+2020-09-03 17:42:12 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2020-09-03 17:42:16 [INFO    ] (basehttp.log_message) "GET /admin/ HTTP/1.1" 200 19653
+2020-09-03 17:42:17 [INFO    ] (basehttp.log_message) "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+2020-09-03 17:42:20 [INFO    ] (basehttp.log_message) "GET /admin/backend/media/ HTTP/1.1" 200 58889
+2020-09-03 17:42:20 [INFO    ] (basehttp.log_message) "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+2020-09-03 17:43:32 [INFO    ] (basehttp.log_message) "GET /admin/backend/media/46/change/ HTTP/1.1" 200 67914
+2020-09-03 17:43:33 [INFO    ] (basehttp.log_message) "GET /summernote/editor/id_elitemangareview-0-moment/ HTTP/1.1" 200 7205
+2020-09-03 17:43:33 [INFO    ] (basehttp.log_message) "GET /summernote/editor/id_elitemangareview-0-plot/ HTTP/1.1" 200 7199
+2020-09-03 17:43:33 [INFO    ] (basehttp.log_message) "GET /summernote/editor/id_elitemangareview-0-characters/ HTTP/1.1" 200 7217
+2020-09-03 17:43:33 [INFO    ] (basehttp.log_message) "GET /summernote/editor/id_elitemangareview-0-quality/ HTTP/1.1" 200 7208
+2020-09-03 17:43:33 [INFO    ] (basehttp.log_message) "GET /summernote/editor/id_elitemangareview-__prefix__-moment/ HTTP/1.1" 200 7232
+2020-09-03 17:43:33 [INFO    ] (basehttp.log_message) "GET /summernote/editor/id_elitemangareview-__prefix__-plot/ HTTP/1.1" 200 7226
+2020-09-03 17:43:33 [INFO    ] (basehttp.log_message) "GET /summernote/editor/id_elitemangareview-__prefix__-quality/ HTTP/1.1" 200 7235
+2020-09-03 17:43:33 [INFO    ] (basehttp.log_message) "GET /summernote/editor/id_elitemangareview-__prefix__-characters/ HTTP/1.1" 200 7244
+2020-09-03 17:43:34 [INFO    ] (basehttp.log_message) "GET /static/summernote/lang/summernote-en-US.min.js?_=1599151414263 HTTP/1.1" 200 27
+2020-09-03 17:43:35 [INFO    ] (basehttp.log_message) "GET /static/summernote/lang/summernote-en-US.min.js?_=1599151414301 HTTP/1.1" 200 27
+2020-09-03 17:43:35 [INFO    ] (basehttp.log_message) "GET /static/summernote/lang/summernote-en-US.min.js?_=1599151414429 HTTP/1.1" 200 27
+2020-09-03 17:43:36 [INFO    ] (basehttp.log_message) "GET /static/summernote/lang/summernote-en-US.min.js?_=1599151416290 HTTP/1.1" 200 27
+2020-09-03 17:43:36 [INFO    ] (basehttp.log_message) "GET /static/summernote/lang/summernote-en-US.min.js?_=1599151416305 HTTP/1.1" 200 27
+2020-09-03 17:43:36 [INFO    ] (basehttp.log_message) "GET /static/summernote/lang/summernote-en-US.min.js?_=1599151416358 HTTP/1.1" 200 27
+2020-09-03 17:43:36 [INFO    ] (basehttp.log_message) "GET /static/summernote/lang/summernote-en-US.min.js?_=1599151416344 HTTP/1.1" 200 27
+2020-09-03 17:43:36 [INFO    ] (basehttp.log_message) "GET /static/summernote/lang/summernote-en-US.min.js?_=1599151416407 HTTP/1.1" 200 27
+2020-09-03 17:43:37 [INFO    ] (basehttp.log_message) "GET /media/media-images/solo-leveling.png HTTP/1.1" 200 163147
+2020-09-03 17:44:05 [INFO    ] (autoreload.trigger_reload) E:\Programming\EliteMangaNew\elitemanga\settings\dev.py changed, reloading.
+2020-09-03 17:44:08 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2020-09-03 17:44:10 [WARNING ] (log.log_response) Not Found: /media/media-images/solo-leveling.png
+2020-09-03 17:44:10 [WARNING ] (basehttp.log_message) "GET /media/media-images/solo-leveling.png HTTP/1.1" 404 77
+2020-09-03 17:44:13 [WARNING ] (log.log_response) Not Found: /media/media-images/solo-leveling.png
+2020-09-03 17:44:13 [WARNING ] (basehttp.log_message) "GET /media/media-images/solo-leveling.png HTTP/1.1" 404 77
+2020-09-03 17:44:34 [WARNING ] (log.log_response) Not Found: /media/media-images/solo-leveling.png
+2020-09-03 17:44:34 [WARNING ] (basehttp.log_message) "GET /media/media-images/solo-leveling.png HTTP/1.1" 404 77
+2020-09-03 17:45:47 [WARNING ] (log.log_response) Not Found: /media/media-images/solo-leveling.png
+2020-09-03 17:45:47 [WARNING ] (basehttp.log_message) "GET /media/media-images/solo-leveling.png HTTP/1.1" 404 77
+2020-09-03 17:46:12 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2020-09-03 17:46:15 [WARNING ] (log.log_response) Not Found: /media/media-images/solo-leveling.png
+2020-09-03 17:46:15 [WARNING ] (basehttp.log_message) "GET /media/media-images/solo-leveling.png HTTP/1.1" 404 77
+2020-09-03 17:46:17 [WARNING ] (log.log_response) Not Found: /media/media-images/solo-leveling.png
+2020-09-03 17:46:17 [WARNING ] (basehttp.log_message) "GET /media/media-images/solo-leveling.png HTTP/1.1" 404 77
+2020-09-03 17:46:23 [INFO    ] (autoreload.trigger_reload) E:\Programming\EliteMangaNew\elitemanga\settings\dev.py changed, reloading.
+2020-09-03 17:46:26 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2020-09-03 17:46:29 [INFO    ] (basehttp.log_message) "GET /media/media-images/solo-leveling.png HTTP/1.1" 200 163147
+2020-09-03 17:46:32 [INFO    ] (basehttp.log_message) "GET /media/media-images/solo-leveling.png HTTP/1.1" 304 0
+2020-09-03 17:46:35 [INFO    ] (basehttp.log_message) "GET /media/media-images/solo-leveling.png HTTP/1.1" 304 0
+2020-09-03 17:47:24 [INFO    ] (basehttp.log_message) "GET /media/media-images/solo-leveling.png HTTP/1.1" 304 0
+2020-09-03 17:47:32 [INFO    ] (autoreload.trigger_reload) E:\Programming\EliteMangaNew\elitemanga\settings\dev.py changed, reloading.
+2020-09-03 17:47:38 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2020-09-03 17:47:40 [WARNING ] (log.log_response) Not Found: /media/media-images/solo-leveling.png
+2020-09-03 17:47:40 [WARNING ] (basehttp.log_message) "GET /media/media-images/solo-leveling.png HTTP/1.1" 404 77
+2020-09-03 17:48:59 [INFO    ] (autoreload.trigger_reload) E:\Programming\EliteMangaNew\elitemanga\settings\dev.py changed, reloading.
+2020-09-03 17:49:04 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader

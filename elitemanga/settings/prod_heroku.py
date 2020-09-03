@@ -23,7 +23,7 @@ AUTH_PASSWORD_VALIDATORS = [
     {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator"},
 ]
 STATIC_URL = "/static/"
-STATIC_ROOT = os.path.join("static")
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:3000",
@@ -47,6 +47,6 @@ CSRF_TRUSTED_ORIGINS = [
     "localhost:3000",
 ]
 MEDIA_URL = "/media/"
-MEDIA_ROOT = os.path.join(BASE_DIR, "build", "media")
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 django_heroku.settings(locals(), logging=False, staticfiles=False)
