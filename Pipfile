@@ -55,6 +55,8 @@ django-jet = "*"
 whitenoise = "*"
 dj-database-url = "*"
 django-heroku = "*"
+cloudinary = "*"
+django-cloudinary-storage = "*"
 
 [requires]
 python_version = "3.7"

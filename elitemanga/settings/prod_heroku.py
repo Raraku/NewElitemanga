@@ -46,7 +46,13 @@ CSRF_TRUSTED_ORIGINS = [
     "http://localhost:3000",
     "localhost:3000",
 ]
+CLOUDINARY_STORAGE = {
+    "CLOUD_NAME": "elitemanga",
+    "API_KEY": "113342832684136",
+    "API_SECRET": "IZU9GTfQCpYWhHXe09YiQEW6SeA",
+}
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 django_heroku.settings(locals(), logging=False, staticfiles=False)
