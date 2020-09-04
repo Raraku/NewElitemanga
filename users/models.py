@@ -56,7 +56,7 @@ class User(AbstractUser):
 
 class Profile(models.Model):
     LEVELS = (("0", "Initiate"),)
-    username = models.CharField(max_length=80)
+    username = models.CharField(max_length=80, unique=True)
     level = models.CharField(max_length=80, choices=LEVELS, default=LEVELS[0][0])
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     avatar = models.ImageField(blank=True, null=True, upload_to="profile-avatars")
