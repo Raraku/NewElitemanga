@@ -57,6 +57,8 @@ dj-database-url = "*"
 django-heroku = "*"
 cloudinary = "*"
 django-cloudinary-storage = "*"
+django-cleanup = "*"
+django-unused-media = "*"
 
 [requires]
 python_version = "3.7"

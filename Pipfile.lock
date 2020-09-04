@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "8f5cfc00642404a05ea977405a79275ccd12d07c6cd0585724ab1346965f90da"
+            "sha256": "82d5a195f77494cbc6ccf8094f5a1808456c9bf9b40f71ba8f7489b01e56724d"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -199,6 +199,14 @@
             "index": "pypi",
             "version": "==0.39.1"
         },
+        "django-cleanup": {
+            "hashes": [
+                "sha256:84f0c0e0a74545adae4c944a76ccf8fb0c195dddccf3b7195c59267abb7763dd",
+                "sha256:de5948e74e00fc74d19bf15e062477b45090ba467587f45b2459eae8f97bc4f4"
+            ],
+            "index": "pypi",
+            "version": "==5.0.0"
+        },
         "django-cloudinary-storage": {
             "hashes": [
                 "sha256:95c855c7334141b2a485ea7eb5716de87bb6ce0d848e205debb3a3ab7bbbd49a",
@@ -290,6 +298,14 @@
             ],
             "version": "==1.1.1"
         },
+        "django-unused-media": {
+            "hashes": [
+                "sha256:2538b2c02ba72d558d35f657a01ecdb7106301bb42ad7855d3872dab1f9dae28",
+                "sha256:4d20a910ba9d46d4112b8096ad4915a8c3d85454e1feb2b9332a2429f56244e6"
+            ],
+            "index": "pypi",
+            "version": "==0.2.1"
+        },
         "djangorestframework": {
             "hashes": [
                 "sha256:376f4b50340a46c15ae15ddd0c853085f4e66058f97e4dbe7d43ed62f5e60651",
@@ -323,10 +339,10 @@
         },
         "google-api-core": {
             "hashes": [
-                "sha256:35cba563034d668ae90ffe1f03193a84e745b38f09592f60258358b5e5ee6238",
-                "sha256:431839101b7edc7b0e6cccca0441cb9015f728fc5f098e146e123bf523e8cf71"
+                "sha256:67e33a852dcca7cb7eff49abc35c8cc2c0bb8ab11397dc8306d911505cae2990",
+                "sha256:779107f17e0fef8169c5239d56a8fbff03f9f72a3893c0c9e5842ec29dfedd54"
             ],
-            "version": "==1.22.1"
+            "version": "==1.22.2"
         },
         "google-auth": {
             "hashes": [

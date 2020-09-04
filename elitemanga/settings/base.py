@@ -34,6 +34,8 @@ INSTALLED_APPS = [
     "rest_framework_bulk",
     "taggit",
     "django_summernote",
+    "django_unused_media",
+    "django_cleanup.apps.CleanupConfig",
 ]
 
 MIDDLEWARE = [
