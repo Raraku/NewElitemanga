@@ -61,7 +61,7 @@ class Profile(models.Model):
     level = models.CharField(max_length=80, choices=LEVELS, default=LEVELS[0][0])
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     avatar = models.ImageField(blank=True, null=True, upload_to="profile-avatars")
-    avatar_thumbnail = models.CloudinaryField(
+    avatar_thumbnail = CloudinaryField(
         # upload_to="product-thumbnails",
         null=True,
         blank=True,
