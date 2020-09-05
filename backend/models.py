@@ -151,9 +151,7 @@ class List(models.Model):
     title = models.CharField(max_length=256)
     upvotes = models.IntegerField()
     tags = TaggableManager(through=TaggedList)
-    image = CloudinaryField(
-        upload_to="list-images", blank=True, null=True, default="list-images/p.png"
-    )
+    image = CloudinaryField(blank=True, null=True, default="list-images/p.png")
     intro = models.TextField()
     slug = models.SlugField(max_length=200, default="")
     date_uploaded = models.DateTimeField(auto_now_add=True)
