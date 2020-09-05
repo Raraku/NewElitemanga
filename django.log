@@ -921,3 +921,496 @@ NotADirectoryError: [WinError 267] The directory name is invalid: 'E:\\Programmi
 2020-09-03 17:47:40 [WARNING ] (basehttp.log_message) "GET /media/media-images/solo-leveling.png HTTP/1.1" 404 77
 2020-09-03 17:48:59 [INFO    ] (autoreload.trigger_reload) E:\Programming\EliteMangaNew\elitemanga\settings\dev.py changed, reloading.
 2020-09-03 17:49:04 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2020-09-05 10:08:51 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2020-09-05 10:10:40 [INFO    ] (basehttp.log_message) "OPTIONS /user-review/get_my_reviews/ HTTP/1.1" 200 0
+2020-09-05 10:10:40 [INFO    ] (basehttp.log_message) "OPTIONS /announcement/get_recent_announcements/ HTTP/1.1" 200 0
+2020-09-05 10:10:40 [INFO    ] (basehttp.log_message) "OPTIONS /profile/ HTTP/1.1" 200 0
+2020-09-05 10:10:40 [INFO    ] (basehttp.log_message) "GET /announcement/get_recent_announcements/ HTTP/1.1" 301 0
+2020-09-05 10:10:40 [INFO    ] (basehttp.log_message) "GET /user-review/get_my_reviews/ HTTP/1.1" 301 0
+2020-09-05 10:10:40 [INFO    ] (basehttp.log_message) "OPTIONS /profile/ HTTP/1.1" 200 0
+2020-09-05 10:10:40 [INFO    ] (basehttp.log_message) "GET /profile/ HTTP/1.1" 301 0
+2020-09-05 10:10:40 [INFO    ] (basehttp.log_message) "GET /profile/ HTTP/1.1" 301 0
+2020-09-05 10:10:40 [INFO    ] (basehttp.log_message) code 400, message Bad request version ('\x1a\x1a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93**\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+2020-09-05 10:10:40 [INFO    ] (basehttp.log_message) code 400, message Bad request version ('JJ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ÚÚ\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+2020-09-05 10:10:40 [ERROR   ] (basehttp.log_message) You're accessing the development server over HTTPS, but it only supports HTTP.
+
+2020-09-05 10:10:40 [INFO    ] (basehttp.log_message) code 400, message Bad request version ('ÊÊ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93úú\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+2020-09-05 10:10:40 [ERROR   ] (basehttp.log_message) You're accessing the development server over HTTPS, but it only supports HTTP.
+
+2020-09-05 10:10:40 [INFO    ] (basehttp.log_message) code 400, message Bad request version ('\x1a\x1a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ÚÚ\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+2020-09-05 10:10:40 [ERROR   ] (basehttp.log_message) You're accessing the development server over HTTPS, but it only supports HTTP.
+
+2020-09-05 10:10:40 [INFO    ] (basehttp.log_message) code 400, message Bad request version ('Ö\x91çí')
+2020-09-05 10:10:40 [ERROR   ] (basehttp.log_message) You're accessing the development server over HTTPS, but it only supports HTTP.
+
+2020-09-05 10:10:40 [INFO    ] (basehttp.log_message) code 400, message Bad request version ('@V{tõ²\x90ÎU&Iïµq\x18\x01Ç6XÍ+G@è\x92à\x14JïT\x9aZ\x00"\x1a\x1a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x00')
+2020-09-05 10:10:40 [ERROR   ] (basehttp.log_message) You're accessing the development server over HTTPS, but it only supports HTTP.
+
+2020-09-05 10:10:40 [ERROR   ] (basehttp.log_message) You're accessing the development server over HTTPS, but it only supports HTTP.
+
+2020-09-05 10:10:40 [INFO    ] (basehttp.log_message) code 400, message Bad request version ('áú\x00"ZZ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x00')
+2020-09-05 10:10:40 [ERROR   ] (basehttp.log_message) You're accessing the development server over HTTPS, but it only supports HTTP.
+
+2020-09-05 10:10:40 [INFO    ] (basehttp.log_message) code 400, message Bad request version ('ñå\x02\x00"jj\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x00')
+2020-09-05 10:10:40 [ERROR   ] (basehttp.log_message) You're accessing the development server over HTTPS, but it only supports HTTP.
+
+2020-09-05 10:10:47 [INFO    ] (basehttp.log_message) code 400, message Bad request version ('ªª\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93**\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+2020-09-05 10:10:47 [ERROR   ] (basehttp.log_message) You're accessing the development server over HTTPS, but it only supports HTTP.
+
+2020-09-05 10:10:47 [INFO    ] (basehttp.log_message) code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03°\x10ÆÈ®*\x96\x14')
+2020-09-05 10:10:47 [ERROR   ] (basehttp.log_message) You're accessing the development server over HTTPS, but it only supports HTTP.
+
+2020-09-05 10:10:50 [INFO    ] (basehttp.log_message) code 400, message Bad request version ('ºº\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93::\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+2020-09-05 10:10:50 [ERROR   ] (basehttp.log_message) You're accessing the development server over HTTPS, but it only supports HTTP.
+
+2020-09-05 10:10:50 [INFO    ] (basehttp.log_message) code 400, message Bad request version ('\x13\x11Ó(Ñq\x82NQ\x17\x8bÞwëöÒ×É\x02\x8b\x017\x83k¾Ý\x99öüÆt\x00"jj\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x00')
+2020-09-05 10:10:50 [ERROR   ] (basehttp.log_message) You're accessing the development server over HTTPS, but it only supports HTTP.
+
+2020-09-05 10:10:53 [INFO    ] (basehttp.log_message) code 400, message Bad request version ('úú\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ÊÊ\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+2020-09-05 10:10:53 [ERROR   ] (basehttp.log_message) You're accessing the development server over HTTPS, but it only supports HTTP.
+
+2020-09-05 10:10:53 [INFO    ] (basehttp.log_message) code 400, message Bad request version ('\x00"::\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x00')
+2020-09-05 10:10:53 [ERROR   ] (basehttp.log_message) You're accessing the development server over HTTPS, but it only supports HTTP.
+
+2020-09-05 10:11:45 [INFO    ] (basehttp.log_message) code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03·\x10ë1')
+2020-09-05 10:11:45 [ERROR   ] (basehttp.log_message) You're accessing the development server over HTTPS, but it only supports HTTP.
+
+2020-09-05 10:11:45 [INFO    ] (basehttp.log_message) code 400, message Bad request version ('ß"Öíä\x83\x10}Ê«¦=\x13÷?\x87~]Ýbh\x82\x00"zz\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x00')
+2020-09-05 10:11:45 [ERROR   ] (basehttp.log_message) You're accessing the development server over HTTPS, but it only supports HTTP.
+
+2020-09-05 10:11:48 [INFO    ] (basehttp.log_message) code 400, message Bad request version ('**\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93\x1a\x1a\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+2020-09-05 10:11:48 [ERROR   ] (basehttp.log_message) You're accessing the development server over HTTPS, but it only supports HTTP.
+
+2020-09-05 10:11:48 [INFO    ] (basehttp.log_message) code 400, message Bad request version ('Í\x8b\x95!;PTÀ\x00"jj\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x00')
+2020-09-05 10:11:48 [ERROR   ] (basehttp.log_message) You're accessing the development server over HTTPS, but it only supports HTTP.
+
+2020-09-05 10:11:55 [INFO    ] (autoreload.trigger_reload) E:\Programming\EliteMangaNew\elitemanga\settings\dev.py changed, reloading.
+2020-09-05 10:11:58 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2020-09-05 10:11:59 [INFO    ] (basehttp.log_message) code 400, message Bad request version ('ÚÚ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93zz\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+2020-09-05 10:11:59 [ERROR   ] (basehttp.log_message) You're accessing the development server over HTTPS, but it only supports HTTP.
+
+2020-09-05 10:12:00 [INFO    ] (basehttp.log_message) code 400, message Bad request version ('¼¥\x00"zz\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x00')
+2020-09-05 10:12:00 [ERROR   ] (basehttp.log_message) You're accessing the development server over HTTPS, but it only supports HTTP.
+
+2020-09-05 10:12:00 [INFO    ] (basehttp.log_message) code 400, message Bad request version ('Û')
+2020-09-05 10:12:00 [ERROR   ] (basehttp.log_message) You're accessing the development server over HTTPS, but it only supports HTTP.
+
+2020-09-05 10:12:00 [INFO    ] (basehttp.log_message) code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03,08\x86\x93Ö{búøª\x8fÔ.ñ\x8eãÙ¬FÿLò.g¨\x99úy0/È')
+2020-09-05 10:12:00 [ERROR   ] (basehttp.log_message) You're accessing the development server over HTTPS, but it only supports HTTP.
+
+2020-09-05 10:12:02 [INFO    ] (basehttp.log_message) code 400, message Bad request version ('ZZ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93JJ\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+2020-09-05 10:12:02 [ERROR   ] (basehttp.log_message) You're accessing the development server over HTTPS, but it only supports HTTP.
+
+2020-09-05 10:12:03 [INFO    ] (basehttp.log_message) code 400, message Bad request version ('ß\x83®.\x05Å¯µ\x0f«Þ\x9d\x05\x93\x9fèU\x03\x12\x00"')
+2020-09-05 10:12:03 [ERROR   ] (basehttp.log_message) You're accessing the development server over HTTPS, but it only supports HTTP.
+
+2020-09-05 10:12:35 [INFO    ] (basehttp.log_message) "OPTIONS /announcement/get_recent_announcements/ HTTP/1.1" 200 0
+2020-09-05 10:12:35 [INFO    ] (basehttp.log_message) "OPTIONS /user-review/get_my_reviews/ HTTP/1.1" 200 0
+2020-09-05 10:12:35 [INFO    ] (basehttp.log_message) "OPTIONS /profile/ HTTP/1.1" 200 0
+2020-09-05 10:12:35 [INFO    ] (basehttp.log_message) "OPTIONS /profile/ HTTP/1.1" 200 0
+2020-09-05 10:12:35 [INFO    ] (basehttp.log_message) "GET /announcement/get_recent_announcements/ HTTP/1.1" 200 579
+2020-09-05 10:12:35 [INFO    ] (basehttp.log_message) "GET /profile/ HTTP/1.1" 200 381
+2020-09-05 10:12:35 [INFO    ] (basehttp.log_message) "GET /profile/ HTTP/1.1" 200 381
+2020-09-05 10:12:36 [INFO    ] (basehttp.log_message) "GET /media/product-thumbnails/profile-avatars/605192_UeIEaN4_JPHP0xR.png HTTP/1.1" 200 18255
+2020-09-05 10:12:36 [INFO    ] (basehttp.log_message) "GET /user-review/get_my_reviews/ HTTP/1.1" 200 17753
+2020-09-05 10:12:38 [INFO    ] (basehttp.log_message) "GET /media/profile-avatars/605192_UeIEaN4.png HTTP/1.1" 200 5533149
+2020-09-05 10:12:47 [INFO    ] (basehttp.log_message) "OPTIONS /profile-upload/ HTTP/1.1" 200 0
+2020-09-05 10:12:48 [INFO    ] (basehttp.log_message) "PATCH /profile-upload/ HTTP/1.1" 201 0
+2020-09-05 10:12:57 [INFO    ] (basehttp.log_message) "GET /profile/ HTTP/1.1" 200 357
+2020-09-05 10:12:57 [INFO    ] (basehttp.log_message) "GET /profile/ HTTP/1.1" 200 357
+2020-09-05 10:12:58 [INFO    ] (basehttp.log_message) "GET /media/profile-avatars/606663_B8BmjJY.jpg HTTP/1.1" 200 850682
+2020-09-05 10:12:58 [INFO    ] (basehttp.log_message) "GET /user-review/get_my_reviews/ HTTP/1.1" 200 17369
+2020-09-05 10:12:58 [INFO    ] (basehttp.log_message) "GET /media/product-thumbnails/606663_qcTI6tA.jpg HTTP/1.1" 200 17621
+2020-09-05 10:13:49 [INFO    ] (basehttp.log_message) "PATCH /profile-upload/ HTTP/1.1" 201 0
+2020-09-05 10:15:55 [INFO    ] (basehttp.log_message) "OPTIONS /user-review/get_my_reviews/ HTTP/1.1" 200 0
+2020-09-05 10:15:55 [INFO    ] (basehttp.log_message) "OPTIONS /announcement/get_recent_announcements/ HTTP/1.1" 200 0
+2020-09-05 10:15:55 [INFO    ] (basehttp.log_message) "GET /announcement/get_recent_announcements/ HTTP/1.1" 200 579
+2020-09-05 10:15:55 [INFO    ] (basehttp.log_message) "OPTIONS /profile/ HTTP/1.1" 200 0
+2020-09-05 10:15:56 [INFO    ] (basehttp.log_message) "OPTIONS /profile/ HTTP/1.1" 200 0
+2020-09-05 10:15:56 [INFO    ] (basehttp.log_message) "GET /profile/ HTTP/1.1" 200 341
+2020-09-05 10:15:56 [INFO    ] (basehttp.log_message) "GET /profile/ HTTP/1.1" 200 341
+2020-09-05 10:15:56 [INFO    ] (basehttp.log_message) "GET /media/product-thumbnails/971551.jpg HTTP/1.1" 200 13619
+2020-09-05 10:15:57 [INFO    ] (basehttp.log_message) "GET /user-review/get_my_reviews/ HTTP/1.1" 200 17113
+2020-09-05 10:15:57 [INFO    ] (basehttp.log_message) "GET /media/profile-avatars/971551.jpg HTTP/1.1" 200 451395
+2020-09-05 10:15:57 [INFO    ] (basehttp.log_message) "GET /media/product-thumbnails/971551.jpg HTTP/1.1" 200 13619
+2020-09-05 10:16:10 [INFO    ] (basehttp.log_message) "OPTIONS /user-review/get_my_reviews/ HTTP/1.1" 200 0
+2020-09-05 10:16:10 [INFO    ] (basehttp.log_message) "OPTIONS /announcement/get_recent_announcements/ HTTP/1.1" 200 0
+2020-09-05 10:16:10 [INFO    ] (basehttp.log_message) "GET /announcement/get_recent_announcements/ HTTP/1.1" 200 579
+2020-09-05 10:16:10 [INFO    ] (basehttp.log_message) "OPTIONS /profile/ HTTP/1.1" 200 0
+2020-09-05 10:16:10 [INFO    ] (basehttp.log_message) "OPTIONS /profile/ HTTP/1.1" 200 0
+2020-09-05 10:16:11 [INFO    ] (basehttp.log_message) "GET /profile/ HTTP/1.1" 200 341
+2020-09-05 10:16:11 [INFO    ] (basehttp.log_message) "GET /profile/ HTTP/1.1" 200 341
+2020-09-05 10:16:11 [INFO    ] (basehttp.log_message) "GET /media/profile-avatars/971551.jpg HTTP/1.1" 200 451395
+2020-09-05 10:16:11 [INFO    ] (basehttp.log_message) "GET /user-review/get_my_reviews/ HTTP/1.1" 200 17113
+2020-09-05 10:16:11 [INFO    ] (basehttp.log_message) "GET /media/product-thumbnails/971551.jpg HTTP/1.1" 200 13619
+2020-09-05 10:16:18 [INFO    ] (basehttp.log_message) "OPTIONS /user-review/get_my_reviews/ HTTP/1.1" 200 0
+2020-09-05 10:16:18 [INFO    ] (basehttp.log_message) "OPTIONS /announcement/get_recent_announcements/ HTTP/1.1" 200 0
+2020-09-05 10:16:18 [INFO    ] (basehttp.log_message) "OPTIONS /profile/ HTTP/1.1" 200 0
+2020-09-05 10:16:18 [INFO    ] (basehttp.log_message) "OPTIONS /profile/ HTTP/1.1" 200 0
+2020-09-05 10:16:18 [INFO    ] (basehttp.log_message) "GET /announcement/get_recent_announcements/ HTTP/1.1" 200 579
+2020-09-05 10:16:18 [INFO    ] (basehttp.log_message) "GET /profile/ HTTP/1.1" 200 341
+2020-09-05 10:16:18 [INFO    ] (basehttp.log_message) "GET /profile/ HTTP/1.1" 200 341
+2020-09-05 10:16:18 [INFO    ] (basehttp.log_message) "GET /user-review/get_my_reviews/ HTTP/1.1" 200 17113
+2020-09-05 10:16:19 [INFO    ] (basehttp.log_message) "GET /media/profile-avatars/971551.jpg HTTP/1.1" 200 451395
+2020-09-05 10:16:19 [INFO    ] (basehttp.log_message) "GET /media/product-thumbnails/971551.jpg HTTP/1.1" 200 13619
+2020-09-05 10:17:17 [INFO    ] (basehttp.log_message) "OPTIONS /user-review/get_my_reviews/ HTTP/1.1" 200 0
+2020-09-05 10:17:17 [INFO    ] (basehttp.log_message) "OPTIONS /announcement/get_recent_announcements/ HTTP/1.1" 200 0
+2020-09-05 10:17:17 [INFO    ] (basehttp.log_message) "OPTIONS /profile/ HTTP/1.1" 200 0
+2020-09-05 10:17:17 [INFO    ] (basehttp.log_message) "GET /announcement/get_recent_announcements/ HTTP/1.1" 200 579
+2020-09-05 10:17:17 [INFO    ] (basehttp.log_message) "OPTIONS /profile/ HTTP/1.1" 200 0
+2020-09-05 10:17:18 [INFO    ] (basehttp.log_message) "GET /profile/ HTTP/1.1" 200 341
+2020-09-05 10:17:18 [INFO    ] (basehttp.log_message) "GET /profile/ HTTP/1.1" 200 341
+2020-09-05 10:17:18 [INFO    ] (basehttp.log_message) "GET /user-review/get_my_reviews/ HTTP/1.1" 200 17113
+2020-09-05 10:17:19 [INFO    ] (basehttp.log_message) "GET /media/profile-avatars/971551.jpg HTTP/1.1" 200 451395
+2020-09-05 10:17:19 [INFO    ] (basehttp.log_message) "GET /media/product-thumbnails/971551.jpg HTTP/1.1" 200 13619
+2020-09-05 10:17:42 [INFO    ] (basehttp.log_message) "OPTIONS /profile-upload/ HTTP/1.1" 200 0
+2020-09-05 10:17:43 [INFO    ] (basehttp.log_message) "PATCH /profile-upload/ HTTP/1.1" 201 0
+2020-09-05 10:18:17 [INFO    ] (basehttp.log_message) "OPTIONS /announcement/get_recent_announcements/ HTTP/1.1" 200 0
+2020-09-05 10:18:17 [INFO    ] (basehttp.log_message) "OPTIONS /user-review/get_my_reviews/ HTTP/1.1" 200 0
+2020-09-05 10:18:17 [INFO    ] (basehttp.log_message) "GET /announcement/get_recent_announcements/ HTTP/1.1" 200 579
+2020-09-05 10:18:18 [INFO    ] (basehttp.log_message) "OPTIONS /profile/ HTTP/1.1" 200 0
+2020-09-05 10:18:18 [INFO    ] (basehttp.log_message) "OPTIONS /profile/ HTTP/1.1" 200 0
+2020-09-05 10:18:18 [INFO    ] (basehttp.log_message) "GET /profile/ HTTP/1.1" 200 357
+2020-09-05 10:18:18 [INFO    ] (basehttp.log_message) "GET /profile/ HTTP/1.1" 200 357
+2020-09-05 10:18:18 [INFO    ] (basehttp.log_message) "GET /user-review/get_my_reviews/ HTTP/1.1" 200 17369
+2020-09-05 10:18:18 [INFO    ] (basehttp.log_message) "GET /media/product-thumbnails/profile-avatars/971551.jpg HTTP/1.1" 200 13619
+2020-09-05 10:18:18 [INFO    ] (basehttp.log_message) "GET /media/profile-avatars/971551.jpg HTTP/1.1" 200 451395
+2020-09-05 10:18:31 [INFO    ] (basehttp.log_message) "GET / HTTP/1.1" 200 6896
+2020-09-05 10:18:32 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+2020-09-05 10:18:32 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+2020-09-05 10:18:32 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+2020-09-05 10:18:32 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+2020-09-05 10:18:32 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+2020-09-05 10:18:32 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+2020-09-05 10:18:32 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37608
+2020-09-05 10:18:32 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1719
+2020-09-05 10:18:32 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+2020-09-05 10:18:32 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+2020-09-05 10:18:32 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+2020-09-05 10:18:32 [WARNING ] (log.log_response) Not Found: /favicon.ico
+2020-09-05 10:18:32 [WARNING ] (basehttp.log_message) "GET /favicon.ico HTTP/1.1" 404 30011
+2020-09-05 10:18:37 [INFO    ] (basehttp.log_message) "GET /admin/ HTTP/1.1" 200 19653
+2020-09-05 10:18:38 [INFO    ] (basehttp.log_message) "GET /static/admin/css/dashboard.css HTTP/1.1" 200 412
+2020-09-05 10:18:38 [INFO    ] (basehttp.log_message) "GET /static/admin/css/base.css HTTP/1.1" 200 16378
+2020-09-05 10:18:38 [INFO    ] (basehttp.log_message) "GET /static/admin/css/responsive.css HTTP/1.1" 200 17944
+2020-09-05 10:18:38 [INFO    ] (basehttp.log_message) "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+2020-09-05 10:18:38 [INFO    ] (basehttp.log_message) "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+2020-09-05 10:18:38 [INFO    ] (basehttp.log_message) "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+2020-09-05 10:18:38 [INFO    ] (basehttp.log_message) "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+2020-09-05 10:18:38 [INFO    ] (basehttp.log_message) "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+2020-09-05 10:18:38 [INFO    ] (basehttp.log_message) "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+2020-09-05 10:18:38 [INFO    ] (basehttp.log_message) "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+2020-09-05 10:19:01 [INFO    ] (basehttp.log_message) "GET /admin/auth/group/ HTTP/1.1" 200 3517
+2020-09-05 10:19:01 [INFO    ] (basehttp.log_message) "GET /static/admin/css/changelists.css HTTP/1.1" 200 6170
+2020-09-05 10:19:01 [INFO    ] (basehttp.log_message) "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 271817
+2020-09-05 10:19:01 [INFO    ] (basehttp.log_message) "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 363
+2020-09-05 10:19:01 [INFO    ] (basehttp.log_message) "GET /static/admin/js/core.js HTTP/1.1" 200 7099
+2020-09-05 10:19:01 [INFO    ] (basehttp.log_message) "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 6918
+2020-09-05 10:19:01 [INFO    ] (basehttp.log_message) "GET /static/admin/js/actions.js HTTP/1.1" 200 6766
+2020-09-05 10:19:01 [INFO    ] (basehttp.log_message) "GET /static/admin/js/urlify.js HTTP/1.1" 200 8941
+2020-09-05 10:19:01 [INFO    ] (basehttp.log_message) "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+2020-09-05 10:19:01 [INFO    ] (basehttp.log_message) "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1530
+2020-09-05 10:19:01 [INFO    ] (basehttp.log_message) "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 128820
+2020-09-05 10:19:01 [INFO    ] (basehttp.log_message) "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+2020-09-05 10:19:01 [INFO    ] (basehttp.log_message) "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+2020-09-05 10:19:04 [INFO    ] (basehttp.log_message) "GET /admin/auth/group/add/ HTTP/1.1" 200 17459
+2020-09-05 10:19:04 [INFO    ] (basehttp.log_message) "GET /static/admin/js/SelectBox.js HTTP/1.1" 200 5753
+2020-09-05 10:19:04 [INFO    ] (basehttp.log_message) "GET /static/admin/css/forms.css HTTP/1.1" 200 8518
+2020-09-05 10:19:04 [INFO    ] (basehttp.log_message) "GET /static/admin/js/change_form.js HTTP/1.1" 200 712
+2020-09-05 10:19:04 [INFO    ] (basehttp.log_message) "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 12322
+2020-09-05 10:19:04 [INFO    ] (basehttp.log_message) "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 495
+2020-09-05 10:19:04 [INFO    ] (basehttp.log_message) "GET /static/admin/css/widgets.css HTTP/1.1" 200 10340
+2020-09-05 10:19:04 [INFO    ] (basehttp.log_message) "GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 3291
+2020-09-05 10:19:09 [INFO    ] (basehttp.log_message) "GET /static/admin/img/icon-unknown-alt.svg HTTP/1.1" 200 655
+2020-09-05 10:19:09 [INFO    ] (basehttp.log_message) "GET /static/admin/img/icon-unknown.svg HTTP/1.1" 200 655
+2020-09-05 10:20:01 [INFO    ] (basehttp.log_message) "POST /admin/auth/group/add/ HTTP/1.1" 302 0
+2020-09-05 10:20:01 [INFO    ] (basehttp.log_message) "GET /admin/auth/group/ HTTP/1.1" 200 4851
+2020-09-05 10:20:01 [INFO    ] (basehttp.log_message) "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+2020-09-05 10:20:05 [INFO    ] (basehttp.log_message) "GET /admin/auth/group/add/ HTTP/1.1" 200 17459
+2020-09-05 10:20:09 [INFO    ] (basehttp.log_message) "GET /admin/auth/group/ HTTP/1.1" 200 4674
+2020-09-05 10:20:11 [INFO    ] (basehttp.log_message) "GET /admin/auth/ HTTP/1.1" 200 2567
+2020-09-05 10:20:12 [INFO    ] (basehttp.log_message) "GET /admin/ HTTP/1.1" 200 19685
+2020-09-05 10:20:17 [INFO    ] (basehttp.log_message) "GET /admin/users/user/ HTTP/1.1" 200 7821
+2020-09-05 10:20:19 [INFO    ] (basehttp.log_message) "GET /admin/users/user/add/ HTTP/1.1" 200 23713
+2020-09-05 10:20:20 [INFO    ] (basehttp.log_message) "GET /static/admin/js/calendar.js HTTP/1.1" 200 7777
+2020-09-05 10:20:20 [INFO    ] (basehttp.log_message) "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 20218
+2020-09-05 10:20:20 [INFO    ] (basehttp.log_message) "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+2020-09-05 10:20:20 [INFO    ] (basehttp.log_message) "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+2020-09-05 10:20:27 [INFO    ] (basehttp.log_message) "GET /admin/users/user/ HTTP/1.1" 200 7821
+2020-09-05 10:20:30 [INFO    ] (basehttp.log_message) "GET /admin/users/user/20/change/ HTTP/1.1" 200 24102
+2020-09-05 10:20:45 [INFO    ] (basehttp.log_message) "GET /media/media-images/kimetsu-no-yaiba.png HTTP/1.1" 200 155479
+2020-09-05 10:20:45 [INFO    ] (basehttp.log_message) "GET /media/media-images/death-note.png HTTP/1.1" 200 10953
+2020-09-05 10:20:46 [INFO    ] (basehttp.log_message) "GET /media/media-images/kimetsu-no-yaiba.png HTTP/1.1" 200 155479
+2020-09-05 10:20:46 [INFO    ] (basehttp.log_message) "GET /media/media-images/fairy-tail.png HTTP/1.1" 200 162209
+2020-09-05 10:20:46 [INFO    ] (basehttp.log_message) "GET /media/media-images/fairy-tail.png HTTP/1.1" 200 162209
+2020-09-05 10:20:46 [INFO    ] (basehttp.log_message) "GET /media/media-images/death-note.png HTTP/1.1" 200 10953
+2020-09-05 10:20:47 [INFO    ] (basehttp.log_message) "GET /media/media-images/kimetsu-no-yaiba.png HTTP/1.1" 200 155479
+2020-09-05 10:20:48 [INFO    ] (basehttp.log_message) "GET /media/media-images/onepunch-man.png HTTP/1.1" 200 163211
+2020-09-05 10:20:48 [INFO    ] (basehttp.log_message) "GET /media/media-images/onepunch-man.png HTTP/1.1" 200 163211
+2020-09-05 10:20:48 [INFO    ] (basehttp.log_message) "GET /media/media-images/onepunch-man.png HTTP/1.1" 200 163211
+2020-09-05 10:20:49 [INFO    ] (basehttp.log_message) "GET /media/media-images/onepunch-man.png HTTP/1.1" 200 163211
+2020-09-05 10:20:49 [INFO    ] (basehttp.log_message) "GET /media/media-images/one-piece.png HTTP/1.1" 200 154993
+2020-09-05 10:21:00 [INFO    ] (basehttp.log_message) "OPTIONS /profile-upload/ HTTP/1.1" 200 0
+2020-09-05 10:21:00 [INFO    ] (basehttp.log_message) "PATCH /profile-upload/ HTTP/1.1" 201 0
+2020-09-05 10:21:12 [INFO    ] (basehttp.log_message) "OPTIONS /profile-upload/ HTTP/1.1" 200 0
+2020-09-05 10:21:12 [INFO    ] (basehttp.log_message) "PATCH /profile-upload/ HTTP/1.1" 201 0
+2020-09-05 10:21:19 [INFO    ] (basehttp.log_message) "GET /admin/users/user/ HTTP/1.1" 200 7821
+2020-09-05 10:21:22 [INFO    ] (basehttp.log_message) "GET /admin/users/user/ HTTP/1.1" 200 7821
+2020-09-05 10:21:37 [INFO    ] (basehttp.log_message) "GET /admin/users/user/ HTTP/1.1" 200 7821
+2020-09-05 10:21:41 [INFO    ] (basehttp.log_message) "GET /admin/users/user/1/change/ HTTP/1.1" 200 24113
+2020-09-05 10:21:48 [INFO    ] (basehttp.log_message) "GET /admin/users/user/ HTTP/1.1" 200 7821
+2020-09-05 10:21:56 [INFO    ] (basehttp.log_message) "OPTIONS /user-review/get_my_reviews/ HTTP/1.1" 200 0
+2020-09-05 10:21:56 [INFO    ] (basehttp.log_message) "OPTIONS /announcement/get_recent_announcements/ HTTP/1.1" 200 0
+2020-09-05 10:21:56 [INFO    ] (basehttp.log_message) "GET /announcement/get_recent_announcements/ HTTP/1.1" 200 579
+2020-09-05 10:21:56 [INFO    ] (basehttp.log_message) "OPTIONS /profile/ HTTP/1.1" 200 0
+2020-09-05 10:21:56 [INFO    ] (basehttp.log_message) "OPTIONS /profile/ HTTP/1.1" 200 0
+2020-09-05 10:21:57 [INFO    ] (basehttp.log_message) "GET /profile/ HTTP/1.1" 200 359
+2020-09-05 10:21:57 [INFO    ] (basehttp.log_message) "GET /profile/ HTTP/1.1" 200 359
+2020-09-05 10:21:57 [INFO    ] (basehttp.log_message) "GET /user-review/get_my_reviews/ HTTP/1.1" 200 17401
+2020-09-05 10:21:57 [INFO    ] (basehttp.log_message) "GET /media/profile-avatars/971551.jpg HTTP/1.1" 200 451395
+2020-09-05 10:21:57 [INFO    ] (basehttp.log_message) "GET /media/product-thumbnails/profile-avatars/971551.jpg HTTP/1.1" 200 13619
+2020-09-05 10:21:59 [INFO    ] (basehttp.log_message) "GET /media/media-images/death-note.png HTTP/1.1" 200 10953
+2020-09-05 10:21:59 [INFO    ] (basehttp.log_message) "GET /media/media-images/kimetsu-no-yaiba.png HTTP/1.1" 200 155479
+2020-09-05 10:22:04 [INFO    ] (basehttp.log_message) "GET /admin/users/user/ HTTP/1.1" 200 7821
+2020-09-05 10:22:04 [WARNING ] (log.log_response) Not Found: /favicon.ico
+2020-09-05 10:22:04 [WARNING ] (basehttp.log_message) "GET /favicon.ico HTTP/1.1" 404 30011
+2020-09-05 10:22:10 [INFO    ] (basehttp.log_message) "GET /admin/users/user/20/change/ HTTP/1.1" 200 24102
+2020-09-05 10:22:15 [INFO    ] (basehttp.log_message) "GET /admin/users/user/ HTTP/1.1" 200 7821
+2020-09-05 10:22:20 [INFO    ] (basehttp.log_message) "GET /admin/users/user/1/change/ HTTP/1.1" 200 24113
+2020-09-05 10:22:25 [INFO    ] (basehttp.log_message) "GET /media/media-images/fairy-tail.png HTTP/1.1" 200 162209
+2020-09-05 10:22:26 [INFO    ] (basehttp.log_message) "GET /media/media-images/kimetsu-no-yaiba.png HTTP/1.1" 200 155479
+2020-09-05 10:22:26 [INFO    ] (basehttp.log_message) "GET /media/media-images/fairy-tail.png HTTP/1.1" 200 162209
+2020-09-05 10:22:26 [INFO    ] (basehttp.log_message) "GET /media/media-images/death-note.png HTTP/1.1" 200 10953
+2020-09-05 10:22:28 [INFO    ] (basehttp.log_message) "GET /media/media-images/kimetsu-no-yaiba.png HTTP/1.1" 200 155479
+2020-09-05 10:22:28 [INFO    ] (basehttp.log_message) "GET /media/media-images/onepunch-man.png HTTP/1.1" 200 163211
+2020-09-05 10:22:28 [INFO    ] (basehttp.log_message) "GET /media/media-images/onepunch-man.png HTTP/1.1" 200 163211
+2020-09-05 10:22:29 [INFO    ] (basehttp.log_message) "GET /media/media-images/onepunch-man.png HTTP/1.1" 200 163211
+2020-09-05 10:22:29 [INFO    ] (basehttp.log_message) "GET /media/media-images/onepunch-man.png HTTP/1.1" 200 163211
+2020-09-05 10:22:29 [INFO    ] (basehttp.log_message) "GET /media/media-images/one-piece.png HTTP/1.1" 200 154993
+2020-09-05 10:22:40 [INFO    ] (basehttp.log_message) "GET /profile/ HTTP/1.1" 200 10942
+2020-09-05 10:22:48 [INFO    ] (basehttp.log_message) "GET /admin/users/user/ HTTP/1.1" 200 7821
+2020-09-05 10:23:16 [INFO    ] (basehttp.log_message) "GET /admin/users/user/1/change/ HTTP/1.1" 200 24113
+2020-09-05 10:23:23 [INFO    ] (basehttp.log_message) "GET /admin/users/user/ HTTP/1.1" 200 7821
+2020-09-05 10:23:24 [INFO    ] (basehttp.log_message) "GET /admin/ HTTP/1.1" 200 19685
+2020-09-05 10:23:26 [INFO    ] (basehttp.log_message) "GET /admin/users/profile/ HTTP/1.1" 200 7874
+2020-09-05 10:23:35 [INFO    ] (basehttp.log_message) "GET /admin/users/profile/2/change/ HTTP/1.1" 200 9416
+2020-09-05 10:23:42 [INFO    ] (basehttp.log_message) "GET /admin/users/profile/ HTTP/1.1" 200 7874
+2020-09-05 10:23:45 [INFO    ] (basehttp.log_message) "GET /admin/users/profile/20/change/ HTTP/1.1" 200 9443
+2020-09-05 10:23:57 [INFO    ] (basehttp.log_message) "POST /admin/users/profile/20/change/ HTTP/1.1" 200 9603
+2020-09-05 10:24:03 [INFO    ] (basehttp.log_message) "POST /admin/users/profile/20/change/ HTTP/1.1" 200 9603
+2020-09-05 10:24:07 [INFO    ] (basehttp.log_message) "GET /admin/users/profile/20/change/ HTTP/1.1" 200 9443
+2020-09-05 10:24:10 [INFO    ] (basehttp.log_message) "GET /admin/users/profile/20/change/ HTTP/1.1" 200 9443
+2020-09-05 10:24:12 [INFO    ] (basehttp.log_message) "GET /admin/users/profile/ HTTP/1.1" 200 7874
+2020-09-05 10:24:14 [INFO    ] (basehttp.log_message) "GET /admin/users/profile/20/change/ HTTP/1.1" 200 9443
+2020-09-05 10:24:30 [INFO    ] (basehttp.log_message) "OPTIONS /profile-upload/ HTTP/1.1" 200 0
+2020-09-05 10:24:30 [WARNING ] (log.log_response) Bad Request: /profile-upload/
+2020-09-05 10:24:30 [WARNING ] (basehttp.log_message) "PATCH /profile-upload/ HTTP/1.1" 400 59
+2020-09-05 10:25:41 [INFO    ] (basehttp.log_message) "OPTIONS /announcement/get_recent_announcements/ HTTP/1.1" 200 0
+2020-09-05 10:25:42 [INFO    ] (basehttp.log_message) "OPTIONS /user-review/get_my_reviews/ HTTP/1.1" 200 0
+2020-09-05 10:25:42 [INFO    ] (basehttp.log_message) "GET /announcement/get_recent_announcements/ HTTP/1.1" 200 579
+2020-09-05 10:25:42 [INFO    ] (basehttp.log_message) "OPTIONS /profile/ HTTP/1.1" 200 0
+2020-09-05 10:25:42 [INFO    ] (basehttp.log_message) "OPTIONS /profile/ HTTP/1.1" 200 0
+2020-09-05 10:25:43 [INFO    ] (basehttp.log_message) "GET /profile/ HTTP/1.1" 200 359
+2020-09-05 10:25:43 [INFO    ] (basehttp.log_message) "GET /profile/ HTTP/1.1" 200 359
+2020-09-05 10:25:44 [INFO    ] (basehttp.log_message) "GET /media/product-thumbnails/profile-avatars/971551.jpg HTTP/1.1" 200 13619
+2020-09-05 10:25:44 [INFO    ] (basehttp.log_message) "GET /media/profile-avatars/971551.jpg HTTP/1.1" 200 451395
+2020-09-05 10:25:44 [INFO    ] (basehttp.log_message) "GET /user-review/get_my_reviews/ HTTP/1.1" 200 17401
+2020-09-05 10:25:44 [INFO    ] (basehttp.log_message) "GET /media/product-thumbnails/profile-avatars/971551.jpg HTTP/1.1" 200 13619
+2020-09-05 10:25:46 [INFO    ] (basehttp.log_message) "GET /media/media-images/death-note.png HTTP/1.1" 200 10953
+2020-09-05 10:25:46 [INFO    ] (basehttp.log_message) "GET /media/media-images/kimetsu-no-yaiba.png HTTP/1.1" 200 155479
+2020-09-05 10:25:53 [INFO    ] (basehttp.log_message) "OPTIONS /profile-upload/ HTTP/1.1" 200 0
+2020-09-05 10:25:54 [WARNING ] (log.log_response) Bad Request: /profile-upload/
+2020-09-05 10:25:54 [WARNING ] (basehttp.log_message) "PATCH /profile-upload/ HTTP/1.1" 400 59
+2020-09-05 10:27:15 [INFO    ] (basehttp.log_message) "GET /admin/ HTTP/1.1" 200 19685
+2020-09-05 10:27:23 [INFO    ] (basehttp.log_message) "GET /media/media-images/fairy-tail.png HTTP/1.1" 200 162209
+2020-09-05 10:27:23 [INFO    ] (basehttp.log_message) "GET /media/media-images/kimetsu-no-yaiba.png HTTP/1.1" 200 155479
+2020-09-05 10:27:23 [INFO    ] (basehttp.log_message) "GET /media/media-images/fairy-tail.png HTTP/1.1" 200 162209
+2020-09-05 10:27:24 [INFO    ] (basehttp.log_message) "GET /media/media-images/death-note.png HTTP/1.1" 200 10953
+2020-09-05 10:28:43 [INFO    ] (basehttp.log_message) "OPTIONS /user-review/get_my_reviews/ HTTP/1.1" 200 0
+2020-09-05 10:28:43 [INFO    ] (basehttp.log_message) "OPTIONS /profile/ HTTP/1.1" 200 0
+2020-09-05 10:28:43 [INFO    ] (basehttp.log_message) "OPTIONS /profile/ HTTP/1.1" 200 0
+2020-09-05 10:28:43 [INFO    ] (basehttp.log_message) "GET /profile/ HTTP/1.1" 200 359
+2020-09-05 10:28:43 [INFO    ] (basehttp.log_message) "GET /media/product-thumbnails/profile-avatars/971551.jpg HTTP/1.1" 200 13619
+2020-09-05 10:28:43 [INFO    ] (basehttp.log_message) "OPTIONS /announcement/get_recent_announcements/ HTTP/1.1" 200 0
+2020-09-05 10:28:43 [INFO    ] (basehttp.log_message) "GET /announcement/get_recent_announcements/ HTTP/1.1" 200 579
+2020-09-05 10:28:43 [INFO    ] (basehttp.log_message) "GET /profile/ HTTP/1.1" 200 359
+2020-09-05 10:28:44 [INFO    ] (basehttp.log_message) "GET /media/profile-avatars/971551.jpg HTTP/1.1" 200 451395
+2020-09-05 10:28:44 [INFO    ] (basehttp.log_message) "GET /user-review/get_my_reviews/ HTTP/1.1" 200 17401
+2020-09-05 10:28:44 [INFO    ] (basehttp.log_message) "GET /media/product-thumbnails/profile-avatars/971551.jpg HTTP/1.1" 200 13619
+2020-09-05 10:28:52 [INFO    ] (basehttp.log_message) "GET /media/media-images/kimetsu-no-yaiba.png HTTP/1.1" 200 155479
+2020-09-05 10:28:52 [INFO    ] (basehttp.log_message) "GET /media/media-images/death-note.png HTTP/1.1" 200 10953
+2020-09-05 10:28:53 [INFO    ] (basehttp.log_message) "GET /media/media-images/fairy-tail.png HTTP/1.1" 200 162209
+2020-09-05 10:28:53 [INFO    ] (basehttp.log_message) "GET /media/media-images/kimetsu-no-yaiba.png HTTP/1.1" 200 155479
+2020-09-05 10:28:54 [INFO    ] (basehttp.log_message) "GET /media/media-images/fairy-tail.png HTTP/1.1" 200 162209
+2020-09-05 10:28:54 [INFO    ] (basehttp.log_message) "GET /media/media-images/death-note.png HTTP/1.1" 200 10953
+2020-09-05 10:28:54 [INFO    ] (basehttp.log_message) "GET /media/media-images/kimetsu-no-yaiba.png HTTP/1.1" 200 155479
+2020-09-05 10:28:54 [INFO    ] (basehttp.log_message) "GET /media/media-images/onepunch-man.png HTTP/1.1" 200 163211
+2020-09-05 10:28:54 [INFO    ] (basehttp.log_message) "GET /media/media-images/onepunch-man.png HTTP/1.1" 200 163211
+2020-09-05 10:28:55 [INFO    ] (basehttp.log_message) "GET /media/media-images/onepunch-man.png HTTP/1.1" 200 163211
+2020-09-05 10:28:55 [INFO    ] (basehttp.log_message) "GET /media/media-images/onepunch-man.png HTTP/1.1" 200 163211
+2020-09-05 10:28:55 [INFO    ] (basehttp.log_message) "GET /media/media-images/one-piece.png HTTP/1.1" 200 154993
+2020-09-05 10:29:46 [INFO    ] (basehttp.log_message) "OPTIONS /user-review/get_my_reviews/ HTTP/1.1" 200 0
+2020-09-05 10:29:46 [INFO    ] (basehttp.log_message) "OPTIONS /announcement/get_recent_announcements/ HTTP/1.1" 200 0
+2020-09-05 10:29:47 [INFO    ] (basehttp.log_message) "GET /announcement/get_recent_announcements/ HTTP/1.1" 200 579
+2020-09-05 10:29:47 [INFO    ] (basehttp.log_message) "OPTIONS /profile/ HTTP/1.1" 200 0
+2020-09-05 10:29:47 [INFO    ] (basehttp.log_message) "OPTIONS /profile/ HTTP/1.1" 200 0
+2020-09-05 10:29:47 [INFO    ] (basehttp.log_message) "GET /profile/ HTTP/1.1" 200 359
+2020-09-05 10:29:47 [INFO    ] (basehttp.log_message) "GET /profile/ HTTP/1.1" 200 359
+2020-09-05 10:29:48 [INFO    ] (basehttp.log_message) "GET /media/product-thumbnails/profile-avatars/971551.jpg HTTP/1.1" 200 13619
+2020-09-05 10:29:48 [INFO    ] (basehttp.log_message) "GET /media/profile-avatars/971551.jpg HTTP/1.1" 200 451395
+2020-09-05 10:29:48 [INFO    ] (basehttp.log_message) "GET /user-review/get_my_reviews/ HTTP/1.1" 200 17401
+2020-09-05 10:29:48 [INFO    ] (basehttp.log_message) "GET /media/product-thumbnails/profile-avatars/971551.jpg HTTP/1.1" 200 13619
+2020-09-05 10:29:48 [INFO    ] (basehttp.log_message) "GET /media/media-images/death-note.png HTTP/1.1" 200 10953
+2020-09-05 10:29:48 [INFO    ] (basehttp.log_message) "GET /media/media-images/kimetsu-no-yaiba.png HTTP/1.1" 200 155479
+2020-09-05 10:29:50 [INFO    ] (basehttp.log_message) "GET /media/media-images/fairy-tail.png HTTP/1.1" 200 162209
+2020-09-05 10:29:50 [INFO    ] (basehttp.log_message) "GET /media/media-images/kimetsu-no-yaiba.png HTTP/1.1" 200 155479
+2020-09-05 10:29:51 [INFO    ] (basehttp.log_message) "GET /media/media-images/fairy-tail.png HTTP/1.1" 200 162209
+2020-09-05 10:29:51 [INFO    ] (basehttp.log_message) "GET /media/media-images/death-note.png HTTP/1.1" 200 10953
+2020-09-05 10:29:53 [INFO    ] (basehttp.log_message) "GET /media/media-images/kimetsu-no-yaiba.png HTTP/1.1" 200 155479
+2020-09-05 10:29:53 [INFO    ] (basehttp.log_message) "GET /media/media-images/onepunch-man.png HTTP/1.1" 200 163211
+2020-09-05 10:29:54 [INFO    ] (basehttp.log_message) "GET /media/media-images/onepunch-man.png HTTP/1.1" 200 163211
+2020-09-05 10:30:00 [INFO    ] (basehttp.log_message) "GET /profile/ HTTP/1.1" 200 359
+2020-09-05 10:30:00 [INFO    ] (basehttp.log_message) "GET /manga/kimetsu-no-yaiba/ HTTP/1.1" 200 5641
+2020-09-05 10:30:00 [INFO    ] (basehttp.log_message) "GET /mixed/43/increment_weekly_reads/ HTTP/1.1" 201 0
+2020-09-05 10:30:00 [INFO    ] (basehttp.log_message) "GET /mixed/43/get_related_manga/ HTTP/1.1" 200 142563
+2020-09-05 10:30:01 [INFO    ] (basehttp.log_message) "GET /media/media-images/dragon-ball.png HTTP/1.1" 200 150267
+2020-09-05 10:30:01 [INFO    ] (basehttp.log_message) "GET /media/media-images/inuyasha-tv-kanketsu-hen.png HTTP/1.1" 200 137214
+2020-09-05 10:30:01 [INFO    ] (basehttp.log_message) "GET /media/media-images/bleach.png HTTP/1.1" 200 142635
+2020-09-05 10:30:01 [INFO    ] (basehttp.log_message) "GET /media/media-images/fullmetal-alchemist.png HTTP/1.1" 200 138847
+2020-09-05 10:30:01 [INFO    ] (basehttp.log_message) "GET /media/media-images/inuyasha.png HTTP/1.1" 200 131155
+2020-09-05 10:30:01 [INFO    ] (basehttp.log_message) "GET /media/media-images/toriko.png HTTP/1.1" 200 163858
+2020-09-05 10:30:02 [INFO    ] (basehttp.log_message) "OPTIONS /mixed/43/get_reviews/ HTTP/1.1" 200 0
+2020-09-05 10:30:02 [INFO    ] (basehttp.log_message) "GET /mixed/43/get_reviews/ HTTP/1.1" 200 2199
+2020-09-05 10:30:26 [INFO    ] (basehttp.log_message) "GET /profile/ HTTP/1.1" 200 359
+2020-09-05 10:30:26 [INFO    ] (basehttp.log_message) "GET /mixed/43/increment_weekly_reads/ HTTP/1.1" 201 0
+2020-09-05 10:30:27 [INFO    ] (basehttp.log_message) "OPTIONS /user-review/get_my_reviews/ HTTP/1.1" 200 0
+2020-09-05 10:30:27 [INFO    ] (basehttp.log_message) "OPTIONS /announcement/get_recent_announcements/ HTTP/1.1" 200 0
+2020-09-05 10:30:27 [INFO    ] (basehttp.log_message) "GET /announcement/get_recent_announcements/ HTTP/1.1" 200 579
+2020-09-05 10:30:27 [INFO    ] (basehttp.log_message) "OPTIONS /profile/ HTTP/1.1" 200 0
+2020-09-05 10:30:27 [INFO    ] (basehttp.log_message) "OPTIONS /profile/ HTTP/1.1" 200 0
+2020-09-05 10:30:27 [INFO    ] (basehttp.log_message) "GET /profile/ HTTP/1.1" 200 359
+2020-09-05 10:30:27 [INFO    ] (basehttp.log_message) "GET /profile/ HTTP/1.1" 200 359
+2020-09-05 10:30:28 [INFO    ] (basehttp.log_message) "GET /user-review/get_my_reviews/ HTTP/1.1" 200 17401
+2020-09-05 10:30:28 [INFO    ] (basehttp.log_message) "GET /media/profile-avatars/971551.jpg HTTP/1.1" 200 451395
+2020-09-05 10:30:28 [INFO    ] (basehttp.log_message) "GET /media/product-thumbnails/profile-avatars/971551.jpg HTTP/1.1" 200 13619
+2020-09-05 10:30:28 [INFO    ] (basehttp.log_message) "GET /media/media-images/kimetsu-no-yaiba.png HTTP/1.1" 200 155479
+2020-09-05 10:30:28 [INFO    ] (basehttp.log_message) "GET /media/media-images/death-note.png HTTP/1.1" 200 10953
+2020-09-05 10:30:32 [INFO    ] (basehttp.log_message) "GET /media/media-images/fairy-tail.png HTTP/1.1" 200 162209
+2020-09-05 10:30:32 [INFO    ] (basehttp.log_message) "GET /media/media-images/kimetsu-no-yaiba.png HTTP/1.1" 200 155479
+2020-09-05 10:30:33 [INFO    ] (basehttp.log_message) "GET /media/media-images/fairy-tail.png HTTP/1.1" 200 162209
+2020-09-05 10:30:33 [INFO    ] (basehttp.log_message) "GET /media/media-images/death-note.png HTTP/1.1" 200 10953
+2020-09-05 10:30:33 [INFO    ] (basehttp.log_message) "GET /media/media-images/kimetsu-no-yaiba.png HTTP/1.1" 200 155479
+2020-09-05 10:30:37 [INFO    ] (basehttp.log_message) "GET /mixed/43/get_reviews/ HTTP/1.1" 200 2199
+2020-09-05 10:31:07 [INFO    ] (basehttp.log_message) "GET /profile/ HTTP/1.1" 200 359
+2020-09-05 10:31:07 [INFO    ] (basehttp.log_message) "GET /media/product-thumbnails/profile-avatars/971551.jpg HTTP/1.1" 304 0
+2020-09-05 10:31:08 [INFO    ] (basehttp.log_message) "GET /mixed/43/increment_weekly_reads/ HTTP/1.1" 201 0
+2020-09-05 10:31:09 [INFO    ] (basehttp.log_message) "OPTIONS /user-review/get_my_reviews/ HTTP/1.1" 200 0
+2020-09-05 10:31:09 [INFO    ] (basehttp.log_message) "OPTIONS /announcement/get_recent_announcements/ HTTP/1.1" 200 0
+2020-09-05 10:31:09 [INFO    ] (basehttp.log_message) "GET /announcement/get_recent_announcements/ HTTP/1.1" 200 579
+2020-09-05 10:31:09 [INFO    ] (basehttp.log_message) "OPTIONS /profile/ HTTP/1.1" 200 0
+2020-09-05 10:31:09 [INFO    ] (basehttp.log_message) "OPTIONS /profile/ HTTP/1.1" 200 0
+2020-09-05 10:31:09 [INFO    ] (basehttp.log_message) "GET /profile/ HTTP/1.1" 200 359
+2020-09-05 10:31:09 [INFO    ] (basehttp.log_message) "GET /profile/ HTTP/1.1" 200 359
+2020-09-05 10:31:09 [INFO    ] (basehttp.log_message) "GET /user-review/get_my_reviews/ HTTP/1.1" 200 17401
+2020-09-05 10:31:10 [INFO    ] (basehttp.log_message) "GET /media/profile-avatars/971551.jpg HTTP/1.1" 200 451395
+2020-09-05 10:31:10 [INFO    ] (basehttp.log_message) "GET /media/product-thumbnails/profile-avatars/971551.jpg HTTP/1.1" 200 13619
+2020-09-05 10:31:10 [INFO    ] (basehttp.log_message) "GET /profile/ HTTP/1.1" 200 359
+2020-09-05 10:31:11 [INFO    ] (basehttp.log_message) "GET /mixed/43/increment_weekly_reads/ HTTP/1.1" 201 0
+2020-09-05 10:31:12 [INFO    ] (basehttp.log_message) "GET /media/media-images/death-note.png HTTP/1.1" 200 10953
+2020-09-05 10:31:12 [INFO    ] (basehttp.log_message) "GET /media/media-images/onepunch-man.png HTTP/1.1" 200 163211
+2020-09-05 10:31:12 [INFO    ] (basehttp.log_message) "GET /media/media-images/kimetsu-no-yaiba.png HTTP/1.1" 200 155479
+2020-09-05 10:31:16 [INFO    ] (basehttp.log_message) "GET /mixed/43/get_reviews/ HTTP/1.1" 200 2199
+2020-09-05 10:31:17 [INFO    ] (basehttp.log_message) "OPTIONS /user-review/get_my_reviews/ HTTP/1.1" 200 0
+2020-09-05 10:31:17 [INFO    ] (basehttp.log_message) "OPTIONS /announcement/get_recent_announcements/ HTTP/1.1" 200 0
+2020-09-05 10:31:17 [INFO    ] (basehttp.log_message) "GET /announcement/get_recent_announcements/ HTTP/1.1" 200 579
+2020-09-05 10:31:17 [INFO    ] (basehttp.log_message) "OPTIONS /profile/ HTTP/1.1" 200 0
+2020-09-05 10:31:17 [INFO    ] (basehttp.log_message) "OPTIONS /profile/ HTTP/1.1" 200 0
+2020-09-05 10:31:18 [INFO    ] (basehttp.log_message) "GET /profile/ HTTP/1.1" 200 359
+2020-09-05 10:31:18 [INFO    ] (basehttp.log_message) "GET /profile/ HTTP/1.1" 200 359
+2020-09-05 10:31:18 [INFO    ] (basehttp.log_message) "GET /user-review/get_my_reviews/ HTTP/1.1" 200 17401
+2020-09-05 10:31:18 [INFO    ] (basehttp.log_message) "GET /media/profile-avatars/971551.jpg HTTP/1.1" 200 451395
+2020-09-05 10:31:18 [INFO    ] (basehttp.log_message) "GET /media/product-thumbnails/profile-avatars/971551.jpg HTTP/1.1" 200 13619
+2020-09-05 10:31:19 [INFO    ] (basehttp.log_message) "GET /media/media-images/death-note.png HTTP/1.1" 200 10953
+2020-09-05 10:31:19 [INFO    ] (basehttp.log_message) "GET /media/media-images/kimetsu-no-yaiba.png HTTP/1.1" 200 155479
+2020-09-05 10:31:19 [INFO    ] (basehttp.log_message) "GET /media/media-images/onepunch-man.png HTTP/1.1" 200 163211
+2020-09-05 13:12:15 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2020-09-05 13:26:21 [INFO    ] (basehttp.log_message) "OPTIONS /announcement/get_recent_announcements/ HTTP/1.1" 200 0
+2020-09-05 13:26:21 [INFO    ] (basehttp.log_message) "GET /lists/get_recent_lists HTTP/1.1" 301 0
+2020-09-05 13:26:21 [INFO    ] (basehttp.log_message) "GET /mixedinfo/?page=1&page_size=24 HTTP/1.1" 200 15200
+2020-09-05 13:26:21 [INFO    ] (basehttp.log_message) "OPTIONS /profile/ HTTP/1.1" 200 0
+2020-09-05 13:26:21 [INFO    ] (basehttp.log_message) "GET /mangainfo/get_current_manga/ HTTP/1.1" 200 7987
+2020-09-05 13:26:21 [INFO    ] (basehttp.log_message) "GET /animeinfo/get_current_anime/ HTTP/1.1" 200 8259
+2020-09-05 13:26:21 [INFO    ] (basehttp.log_message) "GET /animeinfo/get_weekly_manga/ HTTP/1.1" 200 8315
+2020-09-05 13:26:21 [INFO    ] (basehttp.log_message) "GET /mangainfo/get_weekly_manga/ HTTP/1.1" 200 3958
+2020-09-05 13:26:21 [INFO    ] (basehttp.log_message) "GET /mixedinfo/get_heroes/ HTTP/1.1" 200 1311
+2020-09-05 13:26:22 [INFO    ] (basehttp.log_message) "GET /animeinfo/get_unreleased_anime/ HTTP/1.1" 200 1922
+2020-09-05 13:26:22 [INFO    ] (basehttp.log_message) "GET /lists/get_recent_lists/ HTTP/1.1" 200 742
+2020-09-05 13:26:22 [INFO    ] (basehttp.log_message) "GET /announcement/get_recent_announcements/ HTTP/1.1" 200 579
+2020-09-05 13:26:22 [INFO    ] (basehttp.log_message) "GET /profile/ HTTP/1.1" 200 359
+2020-09-05 13:26:23 [INFO    ] (basehttp.log_message) "GET /media/media-images/boku-no-hero-academia.png HTTP/1.1" 200 143824
+2020-09-05 13:26:23 [INFO    ] (basehttp.log_message) "GET /media/media-images/one-piece_uyIZpAk.png HTTP/1.1" 200 161219
+2020-09-05 13:26:23 [INFO    ] (basehttp.log_message) "GET /media/media-images/solo-leveling.png HTTP/1.1" 200 163147
+2020-09-05 13:26:23 [INFO    ] (basehttp.log_message) "GET /media/media-images/domestic-na-kanojo.png HTTP/1.1" 200 141401
+2020-09-05 13:26:23 [INFO    ] (basehttp.log_message) "GET /media/media-images/kingdom.png HTTP/1.1" 200 162378
+2020-09-05 13:26:23 [INFO    ] (basehttp.log_message) "GET /media/media-images/fullmetal-alchemist-brotherhood_4fcofLj.png HTTP/1.1" 200 130116
+2020-09-05 13:26:23 [INFO    ] (basehttp.log_message) "GET /media/media-images/tower-of-god.png HTTP/1.1" 200 119312
+2020-09-05 13:26:23 [INFO    ] (basehttp.log_message) "GET /media/media-images/rurouni-kenshin-meiji-kenkaku-romantan.png HTTP/1.1" 200 138590
+2020-09-05 13:26:23 [INFO    ] (basehttp.log_message) "GET /media/media-images/fruits-basket-1st-season_5AIwDRt.png HTTP/1.1" 200 129034
+2020-09-05 13:26:23 [INFO    ] (basehttp.log_message) "GET /media/media-images/gleipnir_JA4C1rB.png HTTP/1.1" 200 128730
+2020-09-05 13:26:23 [INFO    ] (basehttp.log_message) "GET /media/media-images/bleach_nqCY2TE.png HTTP/1.1" 200 148262
+2020-09-05 13:26:24 [INFO    ] (basehttp.log_message) "GET /media/list-images/p_aOl1sej.png HTTP/1.1" 200 2011
+2020-09-05 13:26:24 [INFO    ] (basehttp.log_message) "GET /media/list-images/p_m5PYqOP.png HTTP/1.1" 200 2011
+2020-09-05 13:26:24 [INFO    ] (basehttp.log_message) "GET /media/list-images/p.png HTTP/1.1" 200 2011
+2020-09-05 13:26:24 [INFO    ] (basehttp.log_message) "GET /media/media-images/rezero-kara-hajimeru-isekai-seikatsu-2nd-season.png HTTP/1.1" 200 125696
+2020-09-05 13:26:24 [INFO    ] (basehttp.log_message) "GET /media/media-images/kimetsu-no-yaiba-movie-mugen-ressha-hen.png HTTP/1.1" 200 156196
+2020-09-05 13:26:24 [INFO    ] (basehttp.log_message) "GET /media/product-thumbnails/profile-avatars/971551.jpg HTTP/1.1" 304 0
+2020-09-05 13:26:24 [INFO    ] (basehttp.log_message) "GET /media/list-images/p_Z1vmHbJ.png HTTP/1.1" 200 2011
+2020-09-05 13:26:24 [INFO    ] (basehttp.log_message) "GET /media/media-images/yahari-ore-no-seishun-love-comedy-wa-machigatteiru.-kan.png HTTP/1.1" 200 97948
+2020-09-05 13:26:24 [INFO    ] (basehttp.log_message) "GET /media/media-images/yakusoku-no-neverland-2nd-seasonthe-promised-neverland-2nd-season.png HTTP/1.1" 200 58744
+2020-09-05 13:26:24 [INFO    ] (basehttp.log_message) "GET /media/media-images/evangelion-3.01.0evangelion-3.01.0-thrice-upon-a-time.png HTTP/1.1" 200 145572
+2020-09-05 13:26:25 [INFO    ] (basehttp.log_message) "GET /media/list-images/605192.png HTTP/1.1" 200 5533149
+2020-09-05 13:52:36 [INFO    ] (basehttp.log_message) "GET /media/media-images/boruto-naruto-next-generations_1Y7bxh8.png HTTP/1.1" 200 147907
+2020-09-05 13:52:36 [INFO    ] (basehttp.log_message) "GET /media/media-images/the-god-of-high-school_Ck3vFlZ.png HTTP/1.1" 200 149487
+2020-09-05 13:52:36 [INFO    ] (basehttp.log_message) "GET /media/media-images/kanojo-okarishimasu_6F98t7y.png HTTP/1.1" 200 118293
+2020-09-05 13:52:36 [INFO    ] (basehttp.log_message) "GET /media/media-images/detective-conan_i5gCjWN.png HTTP/1.1" 200 137537
+2020-09-05 13:52:36 [INFO    ] (basehttp.log_message) "GET /media/media-images/black-clover_oJbSrpY.png HTTP/1.1" 200 150102
+2020-09-05 13:52:36 [INFO    ] (basehttp.log_message) "GET /media/media-images/doraemon-2005_e2yolu8.png HTTP/1.1" 200 123060
+2020-09-05 13:52:36 [INFO    ] (basehttp.log_message) "GET /media/media-images/dr.-slump.png HTTP/1.1" 200 137715
+2020-09-05 13:52:36 [INFO    ] (basehttp.log_message) "GET /media/media-images/black-clover.png HTTP/1.1" 200 178469
+2020-09-05 13:52:36 [INFO    ] (basehttp.log_message) "GET /media/media-images/bungou-stray-dogs.png HTTP/1.1" 200 132218
+2020-09-05 13:52:37 [INFO    ] (basehttp.log_message) "GET /media/media-images/inu-yashiki.png HTTP/1.1" 200 145629
+2020-09-05 13:52:37 [INFO    ] (basehttp.log_message) "GET /media/media-images/to-aru-majutsu-no-kinsho-mokuroku.png HTTP/1.1" 200 156850
+2020-09-05 13:52:37 [INFO    ] (basehttp.log_message) "GET /media/media-images/kaguya-sama-wa-kokurasetai---tensai-tachi-no-renai-zunousen.png HTTP/1.1" 200 146160
+2020-09-05 13:52:37 [INFO    ] (basehttp.log_message) "GET /media/media-images/yakusoku-no-neverland.png HTTP/1.1" 200 145677
+2020-09-05 13:52:37 [INFO    ] (basehttp.log_message) "GET /media/media-images/seraph-of-the-end.png HTTP/1.1" 200 118606
+2020-09-05 13:52:37 [INFO    ] (basehttp.log_message) "GET /media/media-images/fate/stay-night---heavens-feel.png HTTP/1.1" 200 126412
+2020-09-05 13:52:37 [INFO    ] (basehttp.log_message) "GET /media/media-images/kengan-ashua.png HTTP/1.1" 200 147616
+2020-09-05 13:52:37 [INFO    ] (basehttp.log_message) "GET /media/media-images/bakemonogatari-nishio-ishin.png HTTP/1.1" 200 163980
+2020-09-05 13:52:48 [INFO    ] (basehttp.log_message) "GET /manga/one-piece/ HTTP/1.1" 200 2189
+2020-09-05 13:52:48 [INFO    ] (basehttp.log_message) "GET /mixed/55/increment_weekly_reads/ HTTP/1.1" 201 0
+2020-09-05 13:52:48 [INFO    ] (basehttp.log_message) "GET /mixed/55/get_related_manga/ HTTP/1.1" 200 185273
+2020-09-05 13:52:49 [INFO    ] (basehttp.log_message) "GET /media/media-images/ao-no-exorcist.png HTTP/1.1" 200 129736
+2020-09-05 13:52:49 [INFO    ] (basehttp.log_message) "GET /media/media-images/soul-eater.png HTTP/1.1" 200 129120
+2020-09-05 13:52:49 [INFO    ] (basehttp.log_message) "GET /media/media-images/tensei-shitara-slime-datta-ken.png HTTP/1.1" 200 148831
+2020-09-05 13:52:50 [INFO    ] (basehttp.log_message) "OPTIONS /mixed/55/get_reviews/ HTTP/1.1" 200 0
+2020-09-05 13:52:50 [INFO    ] (basehttp.log_message) "GET /mixed/55/get_reviews/ HTTP/1.1" 200 52
+2020-09-05 13:53:00 [INFO    ] (basehttp.log_message) "GET /mangainfo/get_weekly_manga/ HTTP/1.1" 200 3958
+2020-09-05 13:53:00 [INFO    ] (basehttp.log_message) "GET /animeinfo/get_weekly_manga/ HTTP/1.1" 200 8315
+2020-09-05 13:53:00 [INFO    ] (basehttp.log_message) "GET /animeinfo/get_current_anime/ HTTP/1.1" 200 8259
+2020-09-05 13:53:00 [INFO    ] (basehttp.log_message) "GET /mixedinfo/?page=1&page_size=24 HTTP/1.1" 200 15200
+2020-09-05 13:53:00 [INFO    ] (basehttp.log_message) "GET /animeinfo/get_unreleased_anime/ HTTP/1.1" 200 1922
+2020-09-05 13:53:00 [INFO    ] (basehttp.log_message) "GET /lists/get_recent_lists/ HTTP/1.1" 200 742
+2020-09-05 13:53:00 [INFO    ] (basehttp.log_message) "GET /mangainfo/get_current_manga/ HTTP/1.1" 200 7479
+2020-09-05 13:53:00 [INFO    ] (basehttp.log_message) "GET /mixedinfo/get_heroes/ HTTP/1.1" 200 1311
+2020-09-05 13:53:04 [INFO    ] (basehttp.log_message) "GET /anime/rurouni-kenshin:-meiji-kenkaku-romantan/ HTTP/1.1" 200 1789
+2020-09-05 13:53:04 [INFO    ] (basehttp.log_message) "GET /mixed/344/increment_weekly_reads/ HTTP/1.1" 201 0
+2020-09-05 13:53:05 [INFO    ] (basehttp.log_message) "GET /mixed/344/get_related_manga/ HTTP/1.1" 200 184852
+2020-09-05 13:53:05 [INFO    ] (basehttp.log_message) "GET /media/media-images/gintama.png HTTP/1.1" 200 132734
+2020-09-05 13:53:05 [INFO    ] (basehttp.log_message) "GET /media/media-images/yu-yu-hakusho.png HTTP/1.1" 200 168585
+2020-09-05 13:53:05 [INFO    ] (basehttp.log_message) "GET /media/media-images/gintama_mI7xzSF.png HTTP/1.1" 200 143898
+2020-09-05 13:53:05 [INFO    ] (basehttp.log_message) "GET /media/media-images/rurouni-kenshin.png HTTP/1.1" 200 156379
+2020-09-05 13:53:20 [INFO    ] (basehttp.log_message) "OPTIONS /mixed/344/get_reviews/ HTTP/1.1" 200 0
+2020-09-05 13:53:20 [INFO    ] (basehttp.log_message) "GET /mixed/344/get_reviews/ HTTP/1.1" 200 52
+2020-09-05 13:54:00 [INFO    ] (basehttp.log_message) "GET / HTTP/1.1" 200 6896
+2020-09-05 14:02:41 [INFO    ] (autoreload.trigger_reload) E:\Programming\EliteMangaNew\elitemanga\settings\base.py changed, reloading.
+2020-09-05 14:02:44 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader

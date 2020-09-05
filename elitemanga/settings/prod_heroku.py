@@ -3,10 +3,15 @@
 from .base import *
 import django_heroku
 import dj_database_url
+from corsheaders.defaults import default_headers
+
+CORS_ALLOW_HEADERS = default_headers + ("Access-Control-Allow-Origin",)
 
 DEBUG = False
 ALLOWED_HOSTS += [
     "elitemanga-test.herokuapp.com",
+    "https://elitemanga-test.herokuapp.com",
+    "https://www.elitemanga-test.herokuapp.com",
 ]
 WSGI_APPLICATION = "elitemanga.wsgi.application"
 
@@ -36,6 +41,10 @@ CORS_ORIGIN_WHITELIST = [
     "http://192.168.43.127:3000",
     "http://192.168.43.127",
     "http://192.168.43.127:8000",
+    "elitemanga.net",
+    "https://elitemanga.net",
+    "https://www.elitemanga.net",
+    "www.elitemanga.net",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
@@ -45,6 +54,10 @@ CSRF_TRUSTED_ORIGINS = [
     "http://192.168.43.127",
     "http://localhost:3000",
     "localhost:3000",
+    "elitemanga.net",
+    "https://elitemanga.net",
+    "https://www.elitemanga.net",
+    "www.elitemanga.net",
 ]
 CLOUDINARY_STORAGE = {
     "CLOUD_NAME": "elitemanga",
@@ -62,4 +75,5 @@ EMAIL_HOST_USER = "elitemangaa@gmail.com"
 EMAIL_HOST_PASSWORD = "DaemonicAura01"
 EMAIL_PORT = 587
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+SECURE_SSL_REDIRECT = True
