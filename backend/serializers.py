@@ -439,7 +439,7 @@ class ListSectionSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = ListSection
-        fields = ["media", "review", "position"]
+        fields = ["media", "review", "position", "image"]
 
 
 class MyTagSerializer(serializers.ModelSerializer):

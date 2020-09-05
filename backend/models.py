@@ -162,6 +162,7 @@ class ListSection(models.Model):
     media = models.ForeignKey(to=Media, on_delete=models.SET_NULL, null=True)
     list = models.ForeignKey(to=List, on_delete=models.SET_NULL, null=True)
     review = models.TextField()
+    image = models.ImageField(upload_to="list-images", blank=True, null=True)
     position = models.IntegerField()
 
     def __str__(self):
