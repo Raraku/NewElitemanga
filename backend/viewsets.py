@@ -595,7 +595,10 @@ class ProfileImageView(generics.RetrieveUpdateAPIView):
         # file_serializer = ProfileImageSerializer(data=request.data, partial=True)
         # if file_serializer.is_valid():
         #     file_serializer.save()
-        return Response(status=status.HTTP_201_CREATED)
+        return Response(
+            status=status.HTTP_201_CREATED,
+            headers={"Access-Control-Allow-Origin": "*",},
+        )
         # else:
         #     return Response(file_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 

@@ -75,5 +75,5 @@ EMAIL_HOST_USER = "elitemangaa@gmail.com"
 EMAIL_HOST_PASSWORD = "DaemonicAura01"
 EMAIL_PORT = 587
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+# SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 SECURE_SSL_REDIRECT = True
