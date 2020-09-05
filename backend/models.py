@@ -15,7 +15,7 @@ from taggit.managers import TaggableManager
 from io import BytesIO
 from PIL import Image
 from django.core.files.base import ContentFile
-from cloudinary.models import CloudinaryField
+
 from taggit.managers import TaggableManager
 from taggit.models import ItemBase, TagBase
 from django.core.validators import MaxValueValidator, MinValueValidator
@@ -151,7 +151,9 @@ class List(models.Model):
     title = models.CharField(max_length=256)
     upvotes = models.IntegerField()
     tags = TaggableManager(through=TaggedList)
-    image = CloudinaryField(blank=True, null=True, default="list-images/p.png")
+    image = models.ImageField(
+        upload_to="list-images", blank=True, null=True, default="list-images/p.png"
+    )
     intro = models.TextField()
     slug = models.SlugField(max_length=200, default="")
     date_uploaded = models.DateTimeField(auto_now_add=True)

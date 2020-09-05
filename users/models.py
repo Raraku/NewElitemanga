@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser, PermissionsMixin, BaseUserManager
 from django.contrib.auth.validators import UnicodeUsernameValidator
 from django.utils.text import slugify
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 
@@ -60,8 +61,10 @@ class Profile(models.Model):
     level = models.CharField(max_length=80, choices=LEVELS, default=LEVELS[0][0])
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     avatar = models.ImageField(blank=True, null=True, upload_to="profile-avatars")
-    avatar_thumbnail = models.ImageField(
-        upload_to="product-thumbnails", null=True, blank=True
+    avatar_thumbnail = models.CloudinaryField(
+        # upload_to="product-thumbnails",
+        null=True,
+        blank=True,
     )
     social_avatar = models.URLField(blank=True, null=True)
     is_referred = models.BooleanField(default=False)
