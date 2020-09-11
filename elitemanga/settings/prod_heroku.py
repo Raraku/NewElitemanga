@@ -3,9 +3,10 @@
 from .base import *
 import django_heroku
 import dj_database_url
-from corsheaders.defaults import default_headers
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 
-CORS_ALLOW_HEADERS = default_headers + ("Access-Control-Allow-Origin",)
 
 DEBUG = False
 ALLOWED_HOSTS += [
@@ -76,4 +77,4 @@ EMAIL_HOST_PASSWORD = "DaemonicAura01"
 EMAIL_PORT = 587
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 # SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
-SECURE_SSL_REDIRECT = True
+# SECURE_SSL_REDIRECT = True
