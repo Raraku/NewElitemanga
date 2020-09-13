@@ -15,12 +15,12 @@ def disable_for_loaddata(signal_handler):
     return wrapper
 
 
-@disable_for_loaddata
-@receiver(post_save, sender=AUTH_USER_MODEL)
-def create_profile(sender, instance, created, **kwargs):
-
-    if created:
-        Profile.objects.create(user=instance, username=instance.username)
+# @disable_for_loaddata
+# @receiver(post_save, sender=Media)
+# def clone_review(sender, instance, created, **kwargs):
+#     if instance.
+#     if created:
+#         Profile.objects.create(user=instance, username=instance.username)
 
 
 @disable_for_loaddata

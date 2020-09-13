@@ -17,7 +17,8 @@ ALLOWED_HOSTS += [
 WSGI_APPLICATION = "elitemanga.wsgi.application"
 
 DATABASES = {}
-DATABASES["default"] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+DATABASES["default"] = dj_database_url.config(
+    conn_max_age=600, ssl_require=True)
 
 CORS_ORIGIN_WHITELIST = ("http://localhost:3000",)
 AUTH_PASSWORD_VALIDATORS = [
@@ -68,7 +69,7 @@ CLOUDINARY_STORAGE = {
 DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
-# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 django_heroku.settings(locals(), logging=False, staticfiles=False)
 EMAIL_USE_TLS = True
 EMAIL_HOST = "smtp.gmail.com"

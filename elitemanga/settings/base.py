@@ -1,6 +1,7 @@
 import os
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+BASE_DIR = os.path.dirname(os.path.dirname(
+    os.path.dirname(os.path.abspath(__file__))))
 SECRET_KEY = "-05sgp9!deq=q1nltm@^^2cc+v29i(tyybv3v2t77qi66czazj"
 DEBUG = False
 ALLOWED_HOSTS = []
@@ -58,7 +59,7 @@ ROOT_URLCONF = "elitemanga.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [os.path.join(BASE_DIR) + "/backend/templates",],
+        "DIRS": [os.path.join(BASE_DIR) + "/backend/templates", ],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -135,4 +136,3 @@ AUTHENTICATION_BACKENDS = (
     "allauth.account.auth_backends.AuthenticationBackend",
 )
 LOGIN_REDIRECT_URL = "/"
-
