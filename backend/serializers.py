@@ -62,6 +62,10 @@ class ElitemangaReviewSerializer(serializers.ModelSerializer):
 
 class MediainfoSerializer(serializers.HyperlinkedModelSerializer):
     rank = ChoiceField(choices=Media.RANK)
+    image_url = serializers.SerializerMethodField()
+
+    def get_image_url(self, obj):
+        return "https://res.cloudinary.com/elitemanga/" + obj.image_url
 
     class Meta:
         model = Media
@@ -90,6 +94,10 @@ class MediainfoSerializer(serializers.HyperlinkedModelSerializer):
 class MediaSearchSerializer(serializers.ModelSerializer):
     tags = serializers.StringRelatedField(many=True)
     rank = ChoiceField(choices=Media.RANK)
+    image_url = serializers.SerializerMethodField()
+
+    def get_image_url(self, obj):
+        return "https://res.cloudinary.com/elitemanga/" + obj.image_url
 
     class Meta:
         model = Media
@@ -125,7 +133,8 @@ class ThroughSourceSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = SourceLink
-        fields = ("link", "official", "name", "homepage", "image", "description")
+        fields = ("link", "official", "name",
+                  "homepage", "image", "description")
 
 
 class MediaAdaptSerializer(serializers.ModelSerializer):
@@ -141,6 +150,10 @@ class MediaSerializer(serializers.ModelSerializer):
     sources = ThroughSourceSerializer(source="sourcelink_set", many=True)
     adaptation = MediaAdaptSerializer()
     media = MediaAdaptSerializer()
+    image_url = serializers.SerializerMethodField()
+
+    def get_image_url(self, obj):
+        return "https://res.cloudinary.com/elitemanga/" + obj.image_url
 
     class Meta:
         model = Media
@@ -201,6 +214,10 @@ class CampaignSerializer(serializers.ModelSerializer):
 class ProfileSerializer(serializers.ModelSerializer):
     verified = serializers.SerializerMethodField()
     past_campaigns = serializers.SerializerMethodField()
+    avatar = serializers.SerializerMethodField()
+
+    def get_avatar(self, obj):
+        return "https://res.cloudinary.com/elitemanga/" + obj.avatar
 
     class Meta:
         model = Profile
@@ -237,6 +254,11 @@ class ReferralSerializer(serializers.ModelSerializer):
 
 
 class ProfileImageSerializer(serializers.ModelSerializer):
+    avatar = serializers.SerializerMethodField()
+
+    def get_avatar(self, obj):
+        return "https://res.cloudinary.com/elitemanga/" + obj.avatar
+
     class Meta:
         model = Profile
         fields = ["avatar", "username"]
@@ -453,6 +475,10 @@ class MyTagSerializer(serializers.ModelSerializer):
 class ListSerializer(serializers.ModelSerializer):
     listsection_set = ListSectionSerializer(many=True)
     tags = MyTagSerializer(many=True)
+    image = serializers.SerializerMethodField()
+
+    def get_image(self, obj):
+        return "https://res.cloudinary.com/elitemanga/" + obj.image
 
     class Meta:
 

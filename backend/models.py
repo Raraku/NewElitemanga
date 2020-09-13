@@ -66,8 +66,8 @@ class Source(models.Model):
     name = models.CharField(max_length=50)
     homepage = models.URLField()
     # type = models.CharField(choices=SOURCE, max_length=40)
-    image = CloudinaryField("image")
-    # image = models.ImageField(blank=True, null=True)
+    # image = CloudinaryField("image")
+    image = models.ImageField(blank=True, null=True)
     description = models.TextField(blank=True, null=True)
 
     def __str__(self):
