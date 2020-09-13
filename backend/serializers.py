@@ -65,7 +65,7 @@ class MediainfoSerializer(serializers.HyperlinkedModelSerializer):
     image_url = serializers.SerializerMethodField()
 
     def get_image_url(self, obj):
-        return "https://res.cloudinary.com/elitemanga/" + str(obj.image_url.url)
+        return str(obj.image_url.url)
 
     class Meta:
         model = Media
@@ -97,7 +97,7 @@ class MediaSearchSerializer(serializers.ModelSerializer):
     image_url = serializers.SerializerMethodField()
 
     def get_image_url(self, obj):
-        return "https://res.cloudinary.com/elitemanga/" + str(obj.image_url.url)
+        return str(obj.image_url.url)
 
     class Meta:
         model = Media
@@ -153,7 +153,7 @@ class MediaSerializer(serializers.ModelSerializer):
     image_url = serializers.SerializerMethodField()
 
     def get_image_url(self, obj):
-        return "https://res.cloudinary.com/elitemanga/" + str(obj.image_url.url)
+        return str(obj.image_url.url)
 
     class Meta:
         model = Media
@@ -217,7 +217,7 @@ class ProfileSerializer(serializers.ModelSerializer):
     avatar = serializers.SerializerMethodField()
 
     def get_avatar(self, obj):
-        return "https://res.cloudinary.com/elitemanga/" + str(obj.avatar.url)
+        return str(obj.avatar.url)
 
     class Meta:
         model = Profile
@@ -257,7 +257,7 @@ class ProfileImageSerializer(serializers.ModelSerializer):
     avatar = serializers.SerializerMethodField()
 
     def get_avatar(self, obj):
-        return "https://res.cloudinary.com/elitemanga/" + str(obj.avatar.url)
+        return str(obj.avatar.url)
 
     class Meta:
         model = Profile
@@ -478,7 +478,7 @@ class ListSerializer(serializers.ModelSerializer):
     image = serializers.SerializerMethodField()
 
     def get_image(self, obj):
-        return "https://res.cloudinary.com/elitemanga/" + str(obj.image.url)
+        return str(obj.image.url)
 
     class Meta:
 

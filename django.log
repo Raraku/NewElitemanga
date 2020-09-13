@@ -2228,3 +2228,4 @@ NotADirectoryError: [WinError 267] The directory name is invalid: 'E:\\Programmi
 2020-09-10 22:38:48 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
 2020-09-10 22:38:49 [WARNING ] (log.log_response) Not Found: /favicon.ico
 2020-09-10 22:38:49 [WARNING ] (basehttp.log_message) "GET /favicon.ico HTTP/1.1" 404 30011
+2020-09-13 23:44:22 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
