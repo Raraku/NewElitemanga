@@ -95,7 +95,8 @@ class Media(models.Model):
     pre_image_url = models.URLField(blank=True, null=True)
     # image_url = models.URLField(blank=True, null=True)
     image_url = models.ImageField(
-        upload_to="media-images/", blank=True, null=True)
+        # upload_to="media-images/",
+        blank=True, null=True)
     rank = models.CharField(max_length=32, choices=RANK, default=RANK[4][0])
     baka = models.BooleanField(default=True)
     slug = models.SlugField(max_length=200, default="", blank=True, null=True)
@@ -154,7 +155,8 @@ class List(models.Model):
     upvotes = models.IntegerField()
     tags = TaggableManager(through=TaggedList)
     image = models.ImageField(
-        upload_to="list-images/", blank=True, null=True, default="list-images/p.png"
+        # upload_to="list-images/",
+        blank=True, null=True, default="list-images/p.png"
     )
     intro = models.TextField()
     slug = models.SlugField(max_length=200, default="")
@@ -165,7 +167,9 @@ class ListSection(models.Model):
     media = models.ForeignKey(to=Media, on_delete=models.SET_NULL, null=True)
     list = models.ForeignKey(to=List, on_delete=models.SET_NULL, null=True)
     review = models.TextField()
-    image = models.ImageField(upload_to="list-images/", blank=True, null=True)
+    image = models.ImageField(
+        # upload_to="list-images",
+        blank=True, null=True)
     position = models.IntegerField()
 
     def __str__(self):
