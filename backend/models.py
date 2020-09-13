@@ -98,7 +98,7 @@ class Media(models.Model):
     # image_url = models.ImageField(
     #     # upload_to="media-images/",
     #     blank=True, null=True)
-    image_url = CloudinaryField("image")
+    image_url = CloudinaryField("image", blank=True, null=True)
     rank = models.CharField(max_length=32, choices=RANK, default=RANK[4][0])
     baka = models.BooleanField(default=True)
     slug = models.SlugField(max_length=200, default="", blank=True, null=True)
@@ -160,7 +160,7 @@ class List(models.Model):
     #     # upload_to="list-images/",
     #     blank=True, null=True, default="list-images/p.png"
     # )
-    image = CloudinaryField("image")
+    image = CloudinaryField("image", blank=True, null=True)
     intro = models.TextField()
     slug = models.SlugField(max_length=200, default="")
     date_uploaded = models.DateTimeField(auto_now_add=True)
@@ -170,7 +170,7 @@ class ListSection(models.Model):
     media = models.ForeignKey(to=Media, on_delete=models.SET_NULL, null=True)
     list = models.ForeignKey(to=List, on_delete=models.SET_NULL, null=True)
     review = models.TextField()
-    image = CloudinaryField("image")
+    image = CloudinaryField("image", blank=True, null=True)
     # image = models.ImageField(
     #     # upload_to="list-images",
     #     blank=True, null=True)

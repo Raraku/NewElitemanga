@@ -65,7 +65,7 @@ class Profile(models.Model):
     #     blank=True, null=True,
     #     # upload_to="profile-avatars/"
     # )
-    avatar = CloudinaryField("image")
+    avatar = CloudinaryField("image", blank=True, null=True)
     avatar_thumbnail = models.ImageField(
         # upload_to="product-thumbnails/",
         null=True, blank=True,
