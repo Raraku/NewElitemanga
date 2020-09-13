@@ -74,7 +74,8 @@ class Source(models.Model):
 
 
 class Media(models.Model):
-    RANK = (("1", "Kami"), ("2", "S"), ("3", "A"), ("4", "B"), ("5", "Unranked"))
+    RANK = (("1", "Kami"), ("2", "S"), ("3", "A"),
+            ("4", "B"), ("5", "Unranked"))
     MEDIA_STATUS = (
         ("0", "Finished"),
         ("1", "Ongoing"),
@@ -93,7 +94,8 @@ class Media(models.Model):
     status = models.CharField(choices=MEDIA_STATUS, max_length=32)
     pre_image_url = models.URLField(blank=True, null=True)
     # image_url = models.URLField(blank=True, null=True)
-    image_url = models.ImageField(upload_to="media-images", blank=True, null=True)
+    image_url = models.ImageField(
+        upload_to="media-images/", blank=True, null=True)
     rank = models.CharField(max_length=32, choices=RANK, default=RANK[4][0])
     baka = models.BooleanField(default=True)
     slug = models.SlugField(max_length=200, default="", blank=True, null=True)
@@ -152,7 +154,7 @@ class List(models.Model):
     upvotes = models.IntegerField()
     tags = TaggableManager(through=TaggedList)
     image = models.ImageField(
-        upload_to="list-images", blank=True, null=True, default="list-images/p.png"
+        upload_to="list-images/", blank=True, null=True, default="list-images/p.png"
     )
     intro = models.TextField()
     slug = models.SlugField(max_length=200, default="")
@@ -163,7 +165,7 @@ class ListSection(models.Model):
     media = models.ForeignKey(to=Media, on_delete=models.SET_NULL, null=True)
     list = models.ForeignKey(to=List, on_delete=models.SET_NULL, null=True)
     review = models.TextField()
-    image = models.ImageField(upload_to="list-images", blank=True, null=True)
+    image = models.ImageField(upload_to="list-images/", blank=True, null=True)
     position = models.IntegerField()
 
     def __str__(self):
@@ -221,7 +223,8 @@ class ElitemangaReview(models.Model):
 
 class Review(models.Model):
     author = models.ForeignKey(Profile, on_delete=models.CASCADE)
-    media = models.ForeignKey(Media, on_delete=models.CASCADE, blank=True, null=True)
+    media = models.ForeignKey(
+        Media, on_delete=models.CASCADE, blank=True, null=True)
     content = models.TextField()
     created = models.DateField(auto_now_add=True)
     moment_score = models.IntegerField(default=0)
@@ -274,4 +277,3 @@ class Referral(models.Model):
     referrals = models.ManyToManyField(
         Profile, related_name="referred", blank=True, related_query_name="referred"
     )
-
