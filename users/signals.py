@@ -37,21 +37,21 @@ def save_profile(sender, instance, **kwargs):
     instance.profile.save()
 
 
-@disable_for_loaddata
-@receiver(pre_save, sender=Profile)
-def generate_thumbnail(sender, instance, **kwargs):
-    if kwargs.get("raw", False):
-        return False
-    if instance.avatar:
-        image = Image.open(instance.avatar)
-        image = image.convert("RGB")
-        image.thumbnail(THUMBNAIL_SIZE, Image.ANTIALIAS)
+# @disable_for_loaddata
+# @receiver(pre_save, sender=Profile)
+# def generate_thumbnail(sender, instance, **kwargs):
+#     if kwargs.get("raw", False):
+#         return False
+#     if instance.avatar:
+#         image = Image.open(instance.avatar)
+#         image = image.convert("RGB")
+#         image.thumbnail(THUMBNAIL_SIZE, Image.ANTIALIAS)
 
-        temp_thumb = BytesIO()
-        image.save(temp_thumb, "PNG")
-        temp_thumb.seek(0)
-        # set save=False, otherwise it'll run in an infinite loop
-        instance.avatar_thumbnail.save(
-            instance.avatar.name, ContentFile(temp_thumb.read()), save=False
-        )
-        temp_thumb.close()
+#         temp_thumb = BytesIO()
+#         image.save(temp_thumb, "PNG")
+#         temp_thumb.seek(0)
+#         # set save=False, otherwise it'll run in an infinite loop
+#         instance.avatar_thumbnail.save(
+#             instance.avatar.name, ContentFile(temp_thumb.read()), save=False
+#         )
+#         temp_thumb.close()
