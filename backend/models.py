@@ -139,9 +139,11 @@ class Media(models.Model):
             image.save(temp_thumb, "PNG")
             temp_thumb.seek(0)
             # set save=False, otherwise it'll run in an infinite loop
-            self.image_url.save(
-                self.alias + ".png", ContentFile(temp_thumb.read()), save=False
-            )
+            self.image_url = self.alias + \
+                ".png", ContentFile(temp_thumb.read())
+            # self.image_url.save(
+            #     self.alias + ".png", ContentFile(temp_thumb.read()), save=False
+            # )
             temp_thumb.close()
         super(Media, self).save(*args, **kwargs)
 

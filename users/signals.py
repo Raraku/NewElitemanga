@@ -53,7 +53,10 @@ def generate_thumbnail(sender, instance, **kwargs):
         image.save(temp_thumb, "PNG")
         temp_thumb.seek(0)
         # set save=False, otherwise it'll run in an infinite loop
-        instance.avatar_thumbnail.save(
-            instance.avatar.name, ContentFile(temp_thumb.read()), save=False
-        )
+        # instance.avatar_thumbnail.save(
+        #     instance.avatar.name, ContentFile(temp_thumb.read()), save=False
+        # )
+        instance.avatar_thumbnail = instance.avatar.name, ContentFile(
+            temp_thumb.read())
+        instance.save()
         temp_thumb.close()

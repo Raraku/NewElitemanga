@@ -61,15 +61,16 @@ class Profile(models.Model):
     level = models.CharField(
         max_length=80, choices=LEVELS, default=LEVELS[0][0])
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    avatar = models.ImageField(
-        blank=True, null=True,
-        # upload_to="profile-avatars/"
-    )
-    # avatar = CloudinaryField("image", blank=True, null=True)
+    # avatar = models.ImageField(
+    #     blank=True, null=True,
+    #     # upload_to="profile-avatars/"
+    # )
+    avatar = CloudinaryField("image", blank=True, null=True)
     # avatar_thumbnail = models.ImageField(
     #     # upload_to="product-thumbnails/",
     #     null=True, blank=True,
     # )
+    avatar_thumbnail = CloudinaryField("image", blank=True, null=True)
     social_avatar = models.URLField(blank=True, null=True)
     is_referred = models.BooleanField(default=False)
     slug = models.SlugField(blank=True)
