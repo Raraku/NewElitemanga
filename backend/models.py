@@ -95,10 +95,10 @@ class Media(models.Model):
     status = models.CharField(choices=MEDIA_STATUS, max_length=32)
     pre_image_url = models.URLField(blank=True, null=True)
     # image_url = models.URLField(blank=True, null=True)
-    image_url = models.ImageField(
-        # upload_to="media-images/",
-        blank=True, null=True)
-    # image_url = CloudinaryField("image", blank=True, null=True)
+    # image_url = models.ImageField(
+    #     # upload_to="media-images/",
+    #     blank=True, null=True)
+    image_url = CloudinaryField("image", blank=True, null=True)
     rank = models.CharField(max_length=32, choices=RANK, default=RANK[4][0])
     baka = models.BooleanField(default=True)
     slug = models.SlugField(max_length=200, default="", blank=True, null=True)
