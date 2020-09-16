@@ -144,7 +144,7 @@ class Media(models.Model):
             data = cloudinary.uploader.upload(ContentFile(temp_thumb.read()), public_id=str(
                 self.title + str(self.media_type)), resource_type="image", folder="media/media-images/")
             self.image_url = CloudinaryResource(public_id=data.get(
-                "public_id"), format=data.get("format"), signature=data.get("signature"), version=data.get("version"), type="upload", resource_type=data.get("resource_type"), metadata=data)
+                "public_id"), format=data.get("format"), signature=data.get("signature"), version=data.get("version"), type="upload", resource_type=data.get("resource_type"))
             # self.image_url = self.alias + \
             #     ".png", ContentFile(temp_thumb.read())
             # self.image_url.save(
