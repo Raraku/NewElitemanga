@@ -142,9 +142,10 @@ class Media(models.Model):
             temp_thumb.seek(0)
             # set save=False, otherwise it'll run in an infinite loop
             data = cloudinary.uploader.upload(ContentFile(temp_thumb.read()), public_id=str(
-                self.title + str(self.media_type)), resource_type="image", folder="media/media-images/")
+                self.title[:20] + str(self.media_type)), resource_type="image", folder="media/media-images/")
+
             self.image_url = CloudinaryResource(public_id=data.get(
-                "public_id"), format=data.get("format"), signature=data.get("signature"), version=data.get("version"), type="upload", resource_type=data.get("resource_type"))
+                "public_id"), format=data.get("format"), signature=data.get("signature"), version=data.get("version"), type="upload", resource_type=data.get("resource_type"), metadata=data)
             # self.image_url = self.alias + \
             #     ".png", ContentFile(temp_thumb.read())
             # self.image_url.save(
