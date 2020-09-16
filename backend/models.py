@@ -126,7 +126,7 @@ class Media(models.Model):
         return self.title + " " + str(self.media_type)
 
     def save(self, *args, **kwargs):
-        if self.pre_image_url and self.image_url:
+        if self.pre_image_url and not self.image_url:
             print("working " + self.title)
             headers = {
                 "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"
