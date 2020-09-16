@@ -65,7 +65,7 @@ class MediainfoSerializer(serializers.HyperlinkedModelSerializer):
     image_url = serializers.SerializerMethodField()
 
     def get_image_url(self, obj):
-        return str(obj.image_url.build_url)
+        return str(obj.image_url.url)
 
     class Meta:
         model = Media
