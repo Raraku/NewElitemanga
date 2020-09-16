@@ -8,6 +8,7 @@ from django.core.files.base import ContentFile
 from functools import wraps
 import requests
 
+
 THUMBNAIL_SIZE = (100, 100)
 
 

@@ -19,6 +19,8 @@ from cloudinary.models import CloudinaryField
 from taggit.managers import TaggableManager
 from taggit.models import ItemBase, TagBase
 from django.core.validators import MaxValueValidator, MinValueValidator
+from cloudinary import CloudinaryResource
+import cloudinary.uploader
 
 
 class MyCustomTag(TagBase):
@@ -139,8 +141,13 @@ class Media(models.Model):
             image.save(temp_thumb, "PNG")
             temp_thumb.seek(0)
             # set save=False, otherwise it'll run in an infinite loop
-            self.image_url = self.alias + \
-                ".png", ContentFile(temp_thumb.read())
+            data = cloudinary.uploader.upload(ContentFile(temp_thumb.read()), public_id=str(
+                self.title + str(self.media_type)), resource_type="image", folder="media/media-images/")
+            data = json.loads(data)
+            self.image_url = CloudinaryResource(public_id=data.get(
+                "public_id"), format=data.get("format"), signature=data.get("signature"), version=data.get("version"), type="upload", resource_type=data.get("resource_type"), metadata=data)
+            # self.image_url = self.alias + \
+            #     ".png", ContentFile(temp_thumb.read())
             # self.image_url.save(
             #     self.alias + ".png", ContentFile(temp_thumb.read()), save=False
             # )
