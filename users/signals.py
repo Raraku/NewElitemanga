@@ -9,6 +9,7 @@ from functools import wraps
 import requests
 from cloudinary import CloudinaryResource
 import cloudinary.uploader
+from tempfile import NamedTemporaryFile
 
 THUMBNAIL_SIZE = (100, 100)
 
@@ -46,8 +47,11 @@ def generate_thumbnail(sender, instance, **kwargs):
     if kwargs.get("raw", False):
         return False
     if instance.avatar:
-        image = Image.open(instance.avatar)
-        
+        img_temp = NamedTemporaryFile(delete=True)
+        req = requests.get(instance.avatar.url)
+        img_temp.write(req.content)
+        img_temp.flush()
+        image = Image.open(img_temp)
         image = image.convert("RGB")
         image.thumbnail(THUMBNAIL_SIZE, Image.ANTIALIAS)
 
@@ -59,13 +63,13 @@ def generate_thumbnail(sender, instance, **kwargs):
         #     instance.avatar.name, ContentFile(temp_thumb.read()), save=False
         # )
         data = cloudinary.uploader.upload(ContentFile(
-            temp_thumb.read()), public_id=str(instance.username[:15]+str(instance.id)), resource_type="image", folder="media/product-thumbnails/")
+            temp_thumb.read()), public_id=str(instance.username[:15]+str(instance)), resource_type="image", folder="media/product-thumbnails/")
         instance.avatar_thumbnail = CloudinaryResource(public_id=data.get(
             "public_id"), format=data.get("format"), signature=data.get("signature"), version=data.get("version"), type="upload", resource_type=data.get("resource_type"), metadata=data)
         temp_thumb.close()
         instance.save()
 
-#Original
+# Original
 # @disable_for_loaddata
 # @receiver(pre_save, sender=Profile)
 # def generate_thumbnail(sender, instance, **kwargs):
