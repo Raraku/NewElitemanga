@@ -477,8 +477,8 @@ class ListSerializer(serializers.ModelSerializer):
     tags = MyTagSerializer(many=True)
     image = serializers.SerializerMethodField()
 
-    def get_image(self, obj):
-        return str(obj.image.url)
+    # def get_image(self, obj):
+    #     return str(obj.image.url)
 
     class Meta:
 
