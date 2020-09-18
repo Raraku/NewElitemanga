@@ -41,33 +41,37 @@ def save_profile(sender, instance, **kwargs):
     instance.profile.save()
 
 
-@disable_for_loaddata
-@receiver(pre_save, sender=Profile)
-def generate_thumbnail(sender, instance, **kwargs):
-    if kwargs.get("raw", False):
-        return False
-    if instance.avatar:
-        img_temp = NamedTemporaryFile(delete=True)
-        req = requests.get(instance.avatar.url)
-        img_temp.write(req.content)
-        img_temp.flush()
-        image = Image.open(img_temp)
-        image = image.convert("RGB")
-        image.thumbnail(THUMBNAIL_SIZE, Image.ANTIALIAS)
+# @disable_for_loaddata
+# @receiver(pre_save, sender=Profile)
+# def generate_thumbnail(sender, instance, **kwargs):
+#     if kwargs.get("raw", False):
+#         return False
+#     if instance.avatar:
+#         headers = {
+#             "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"
+#         }
+#         img_temp = NamedTemporaryFile(delete=True)
+#         print(instance.avatar.url)
+#         req = requests.get(instance.avatar.url, headers=headers)
+#         img_temp.write(req.content)
+#         img_temp.flush()
+#         image = Image.open(img_temp)
+#         image = image.convert("RGB")
+#         image.thumbnail(THUMBNAIL_SIZE, Image.ANTIALIAS)
 
-        temp_thumb = BytesIO()
-        image.save(temp_thumb, "PNG")
-        temp_thumb.seek(0)
-        # set save=False, otherwise it'll run in an infinite loop
-        # instance.avatar_thumbnail.save(
-        #     instance.avatar.name, ContentFile(temp_thumb.read()), save=False
-        # )
-        data = cloudinary.uploader.upload(ContentFile(
-            temp_thumb.read()), public_id=str(instance.username[:15]+str(instance)), resource_type="image", folder="media/product-thumbnails/")
-        instance.avatar_thumbnail = CloudinaryResource(public_id=data.get(
-            "public_id"), format=data.get("format"), signature=data.get("signature"), version=data.get("version"), type="upload", resource_type=data.get("resource_type"), metadata=data)
-        temp_thumb.close()
-        instance.save()
+#         temp_thumb = BytesIO()
+#         image.save(temp_thumb, "PNG")
+#         temp_thumb.seek(0)
+#         # set save=False, otherwise it'll run in an infinite loop
+#         # instance.avatar_thumbnail.save(
+#         #     instance.avatar.name, ContentFile(temp_thumb.read()), save=False
+#         # )
+#         data = cloudinary.uploader.upload(ContentFile(
+#             temp_thumb.read()), public_id=str(instance.username[:15], resource_type="image", folder="media/product-thumbnails/")
+#         instance.avatar_thumbnail=CloudinaryResource(public_id=data.get(
+#             "public_id"), format=data.get("format"), signature=data.get("signature"), version=data.get("version"), type="upload", resource_type=data.get("resource_type"), metadata=data)
+#         temp_thumb.close()
+#         instance.save()
 
 # Original
 # @disable_for_loaddata
