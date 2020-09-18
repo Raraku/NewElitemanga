@@ -7,7 +7,8 @@ from PIL import Image
 from django.core.files.base import ContentFile
 from functools import wraps
 import requests
-
+from cloudinary import CloudinaryResource
+import cloudinary.uploader
 
 THUMBNAIL_SIZE = (100, 100)
 
@@ -45,8 +46,8 @@ def generate_thumbnail(sender, instance, **kwargs):
     if kwargs.get("raw", False):
         return False
     if instance.avatar:
-        request = requests.get(instance.avatar.url)
-        image = Image.open(request.content)
+        image = Image.open(instance.avatar)
+        
         image = image.convert("RGB")
         image.thumbnail(THUMBNAIL_SIZE, Image.ANTIALIAS)
 
@@ -57,7 +58,29 @@ def generate_thumbnail(sender, instance, **kwargs):
         # instance.avatar_thumbnail.save(
         #     instance.avatar.name, ContentFile(temp_thumb.read()), save=False
         # )
-        instance.avatar_thumbnail = instance.avatar.name, ContentFile(
-            temp_thumb.read())
-        instance.save()
+        data = cloudinary.uploader.upload(ContentFile(
+            temp_thumb.read()), public_id=str(instance.username[:15]+str(instance.id)), resource_type="image", folder="media/product-thumbnails/")
+        instance.avatar_thumbnail = CloudinaryResource(public_id=data.get(
+            "public_id"), format=data.get("format"), signature=data.get("signature"), version=data.get("version"), type="upload", resource_type=data.get("resource_type"), metadata=data)
         temp_thumb.close()
+        instance.save()
+
+#Original
+# @disable_for_loaddata
+# @receiver(pre_save, sender=Profile)
+# def generate_thumbnail(sender, instance, **kwargs):
+#     if kwargs.get("raw", False):
+#         return False
+#     if instance.avatar:
+#         image = Image.open(instance.avatar)
+#         image = image.convert("RGB")
+#         image.thumbnail(THUMBNAIL_SIZE, Image.ANTIALIAS)
+
+#         temp_thumb = BytesIO()
+#         image.save(temp_thumb, "PNG")
+#         temp_thumb.seek(0)
+#         # set save=False, otherwise it'll run in an infinite loop
+#         instance.avatar_thumbnail.save(
+#             instance.avatar.name, ContentFile(temp_thumb.read()), save=False
+#         )
+#         temp_thumb.close()
