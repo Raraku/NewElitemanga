@@ -3,13 +3,6 @@ from django.contrib.auth.models import AbstractUser, PermissionsMixin, BaseUserM
 from django.contrib.auth.validators import UnicodeUsernameValidator
 from django.utils.text import slugify
 from cloudinary.models import CloudinaryField
-from io import BytesIO
-from PIL import Image
-from django.core.files.base import ContentFile
-import requests
-from cloudinary import CloudinaryResource
-import cloudinary.uploader
-from tempfile import NamedTemporaryFile
 
 # Create your models here.
 
@@ -62,9 +55,6 @@ class User(AbstractUser):
             return self.username
 
 
-THUMBNAIL_SIZE = (100, 100)
-
-
 class Profile(models.Model):
     LEVELS = (("0", "Initiate"),)
     username = models.CharField(max_length=80, unique=True)
@@ -96,29 +86,4 @@ class Profile(models.Model):
     #         self.level
     def save(self, *args, **kwargs):
         self.slug = slugify(str(self.username))
-        if self.avatar:
-            headers = {
-                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"
-            }
-            img_temp = NamedTemporaryFile(delete=True)
-            print(self.avatar.url)
-            req = requests.get(self.avatar.url, headers=headers)
-            img_temp.write(req.content)
-            img_temp.flush()
-            image = Image.open(img_temp)
-            image = image.convert("RGB")
-            image.thumbnail(THUMBNAIL_SIZE, Image.ANTIALIAS)
-
-            temp_thumb = BytesIO()
-            image.save(temp_thumb, "PNG")
-            temp_thumb.seek(0)
-            # set save=False, otherwise it'll run in an infinite loop
-            # instance.avatar_thumbnail.save(
-            #     instance.avatar.name, ContentFile(temp_thumb.read()), save=False
-            # )
-            data = cloudinary.uploader.upload(ContentFile(
-                temp_thumb.read()), resource_type="image", folder="media/product-thumbnails/")
-            self.avatar_thumbnail = CloudinaryResource(public_id=data.get(
-                "public_id"), format=data.get("format"), signature=data.get("signature"), version=data.get("version"), type="upload", resource_type=data.get("resource_type"), metadata=data)
-            temp_thumb.close()
         super(Profile, self).save(*args, **kwargs)

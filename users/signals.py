@@ -67,8 +67,8 @@ def save_profile(sender, instance, **kwargs):
 #         #     instance.avatar.name, ContentFile(temp_thumb.read()), save=False
 #         # )
 #         data = cloudinary.uploader.upload(ContentFile(
-#             temp_thumb.read()), public_id=str(instance.username[:15], resource_type="image", folder="media/product-thumbnails/")
-#         instance.avatar_thumbnail=CloudinaryResource(public_id=data.get(
+#             temp_thumb.read()), resource_type="image", folder="media/product-thumbnails/")
+#         instance.avatar_thumbnail = CloudinaryResource(public_id=data.get(
 #             "public_id"), format=data.get("format"), signature=data.get("signature"), version=data.get("version"), type="upload", resource_type=data.get("resource_type"), metadata=data)
 #         temp_thumb.close()
 #         instance.save()
