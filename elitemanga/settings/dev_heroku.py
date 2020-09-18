@@ -2,7 +2,8 @@
 
 from .base import *
 
-ALLOWED_HOSTS += ["127.0.0.1", "localhost", "192.168.43.127", "192.168.43.127:8000"]
+ALLOWED_HOSTS += ["127.0.0.1", "localhost",
+                  "192.168.43.127", "192.168.43.127:8000"]
 DEBUG = True
 
 WSGI_APPLICATION = "elitemanga.wsgi.application"
@@ -63,3 +64,12 @@ EMAIL_HOST_PASSWORD = "IsraelAire"
 EMAIL_PORT = 587
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 
+CLOUDINARY_STORAGE = {
+    "CLOUD_NAME": "elitemanga",
+    "API_KEY": "113342832684136",
+    "API_SECRET": "IZU9GTfQCpYWhHXe09YiQEW6SeA",
+}
+DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"

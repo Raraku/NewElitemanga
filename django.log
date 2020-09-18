@@ -2332,3 +2332,77 @@ Traceback (most recent call last):
     raise ValueError("Must supply cloud_name in tag or in configuration")
 ValueError: Must supply cloud_name in tag or in configuration
 2020-09-18 13:27:13 [ERROR   ] (basehttp.log_message) "POST /admin/login/?next=/admin/ HTTP/1.1" 500 222433
+2020-09-18 17:54:41 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2020-09-18 17:56:44 [WARNING ] (log.log_response) Not Found: /list/
+2020-09-18 17:56:44 [WARNING ] (basehttp.log_message) "GET /list/ HTTP/1.1" 404 29993
+2020-09-18 17:57:06 [ERROR   ] (log.log_response) Internal Server Error: /lists/
+Traceback (most recent call last):
+  File "C:\Users\IsraelAire\.virtualenvs\EliteMangaNew-P9GD-OnR\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column backend_listsection.image does not exist
+LINE 1: ...ction"."list_id", "backend_listsection"."review", "backend_l...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\IsraelAire\.virtualenvs\EliteMangaNew-P9GD-OnR\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\IsraelAire\.virtualenvs\EliteMangaNew-P9GD-OnR\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\IsraelAire\.virtualenvs\EliteMangaNew-P9GD-OnR\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\IsraelAire\.virtualenvs\EliteMangaNew-P9GD-OnR\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\IsraelAire\.virtualenvs\EliteMangaNew-P9GD-OnR\lib\site-packages\rest_framework\viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\IsraelAire\.virtualenvs\EliteMangaNew-P9GD-OnR\lib\site-packages\rest_framework\views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\IsraelAire\.virtualenvs\EliteMangaNew-P9GD-OnR\lib\site-packages\rest_framework\views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\IsraelAire\.virtualenvs\EliteMangaNew-P9GD-OnR\lib\site-packages\rest_framework\views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\IsraelAire\.virtualenvs\EliteMangaNew-P9GD-OnR\lib\site-packages\rest_framework\mixins.py", line 45, in list
+    return self.get_paginated_response(serializer.data)
+  File "C:\Users\IsraelAire\.virtualenvs\EliteMangaNew-P9GD-OnR\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super(ListSerializer, self).data
+  File "C:\Users\IsraelAire\.virtualenvs\EliteMangaNew-P9GD-OnR\lib\site-packages\rest_framework\serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\IsraelAire\.virtualenvs\EliteMangaNew-P9GD-OnR\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\IsraelAire\.virtualenvs\EliteMangaNew-P9GD-OnR\lib\site-packages\rest_framework\serializers.py", line 686, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\IsraelAire\.virtualenvs\EliteMangaNew-P9GD-OnR\lib\site-packages\rest_framework\serializers.py", line 530, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\IsraelAire\.virtualenvs\EliteMangaNew-P9GD-OnR\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\IsraelAire\.virtualenvs\EliteMangaNew-P9GD-OnR\lib\site-packages\django\db\models\query.py", line 274, in __iter__
+    self._fetch_all()
+  File "C:\Users\IsraelAire\.virtualenvs\EliteMangaNew-P9GD-OnR\lib\site-packages\django\db\models\query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\IsraelAire\.virtualenvs\EliteMangaNew-P9GD-OnR\lib\site-packages\django\db\models\query.py", line 55, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\IsraelAire\.virtualenvs\EliteMangaNew-P9GD-OnR\lib\site-packages\django\db\models\sql\compiler.py", line 1100, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\IsraelAire\.virtualenvs\EliteMangaNew-P9GD-OnR\lib\site-packages\django\db\backends\utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "C:\Users\IsraelAire\.virtualenvs\EliteMangaNew-P9GD-OnR\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\IsraelAire\.virtualenvs\EliteMangaNew-P9GD-OnR\lib\site-packages\django\db\backends\utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\IsraelAire\.virtualenvs\EliteMangaNew-P9GD-OnR\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\IsraelAire\.virtualenvs\EliteMangaNew-P9GD-OnR\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\IsraelAire\.virtualenvs\EliteMangaNew-P9GD-OnR\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column backend_listsection.image does not exist
+LINE 1: ...ction"."list_id", "backend_listsection"."review", "backend_l...
+                                                             ^
+
+2020-09-18 17:57:06 [ERROR   ] (basehttp.log_message) "GET /lists/ HTTP/1.1" 500 186429
+2020-09-18 17:57:53 [INFO    ] (autoreload.trigger_reload) E:\Programming\EliteMangaNew\backend\models.py changed, reloading.
+2020-09-18 17:57:57 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2020-09-18 17:58:04 [INFO    ] (autoreload.trigger_reload) E:\Programming\EliteMangaNew\backend\models.py changed, reloading.
+2020-09-18 17:58:07 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
