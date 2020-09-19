@@ -127,7 +127,7 @@ class Media(models.Model):
 
     def save(self, *args, **kwargs):
         if hasattr(self, "elitemangareview") and self.rank == self.RANK[4][0]:
-            if self.elitemangareview.total_score > 0:
+            if self.elitemangareview.total_score:
                 b = self.elitemangareview.total_score
                 if b >= 30:
                     self.rank = self.RANK[1][0]
