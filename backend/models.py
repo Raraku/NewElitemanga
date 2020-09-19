@@ -127,13 +127,14 @@ class Media(models.Model):
 
     def save(self, *args, **kwargs):
         if hasattr(self, "elitemangareview") and self.rank == self.RANK[4][0]:
-            b = self.elitemangareview.total_score
-            if b >= 30:
-                self.rank = self.RANK[1][0]
-            elif b >= 20:
-                self.rank = self.RANK[2][0]
-            elif b >= 10:
-                self.rank = self.RANK[3][0]
+            if self.elitemangareview.total_score > 0:
+                b = self.elitemangareview.total_score
+                if b >= 30:
+                    self.rank = self.RANK[1][0]
+                elif b >= 20:
+                    self.rank = self.RANK[2][0]
+                elif b >= 10:
+                    self.rank = self.RANK[3][0]
 
         if self.pre_image_url and not self.image_url:
             print("working " + self.title)
