@@ -56,7 +56,7 @@ class ElitemngaReviewInline(admin.StackedInline):
     model = ElitemangaReview
 
     def formfield_for_dbfield(self, db_field, *args, **kwargs):
-        items = ["moment", "characters", "plot", "quality"]
+        items = ["entertainment_value", "characters", "plot", "quality"]
         if db_field.name in items:
             kwargs["widget"] = SummernoteWidget()
             kwargs.pop("request")

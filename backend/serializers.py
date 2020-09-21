@@ -35,8 +35,8 @@ class ElitemangaReviewSerializer(serializers.ModelSerializer):
     class Meta:
         model = ElitemangaReview
         fields = [
-            "moment",
-            "moment_score",
+            "entertainment_value",
+            "entertainment_value_score",
             "plot",
             "plot_score",
             "characters",
@@ -47,8 +47,8 @@ class ElitemangaReviewSerializer(serializers.ModelSerializer):
             "total_score",
         ]
         read_only_fields = [
-            "moment",
-            "moment_score",
+            "entertainment_value",
+            "entertainment_value_score",
             "plot",
             "plot_score",
             "characters",
@@ -289,7 +289,7 @@ class ReviewAuthenticatedSerializer(serializers.ModelSerializer):
             "comment_number",
             "comment_set",
             "is_liked",
-            "moment_score",
+            "entertainment_value_score",
             "plot_score",
             "characters_score",
             "quality_score",
@@ -340,7 +340,7 @@ class ReviewSerializer(serializers.ModelSerializer):
             "id",
             "comment_number",
             "comment_set",
-            "moment_score",
+            "entertainment_value_score",
             "plot_score",
             "characters_score",
             "quality_score",
@@ -376,7 +376,7 @@ class ReviewAloneSerializer(serializers.ModelSerializer):
             "comment_number",
             "comment_set",
             "media",
-            "moment_score",
+            "entertainment_value_score",
             "plot_score",
             "characters_score",
             "quality_score",
@@ -414,7 +414,7 @@ class ReviewAloneAuthSerializer(serializers.ModelSerializer):
             "comment_set",
             "is_liked",
             "media",
-            "moment_score",
+            "entertainment_value_score",
             "plot_score",
             "characters_score",
             "quality_score",

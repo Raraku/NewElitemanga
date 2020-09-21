@@ -200,12 +200,12 @@ class ListSection(models.Model):
 
 
 class ElitemangaReview(models.Model):
-    moment = models.TextField(
+    entertainment_value = models.TextField(
         blank=True,
         null=True,
         default="<p><b>Presentation:</b></p><p><b>Consistency:</b></p><p><b>Predictability:</b></p><p><b>Effort:</b></p><p><b>Main Genre of Moments:</b></p><p><b><br></b></p>",
     )
-    moment_score = models.IntegerField(
+    entertainment_value_score = models.IntegerField(
         default=0, validators=[(MinValueValidator(0)), MaxValueValidator(10)]
     )
     plot = models.TextField(
@@ -240,7 +240,7 @@ class ElitemangaReview(models.Model):
 
     def save(self, *args, **kwargs):
         self.total_score = (
-            self.moment_score
+            self.entertainment_value_score
             + self.plot_score
             + self.characters_score
             + self.quality_score
@@ -254,7 +254,7 @@ class Review(models.Model):
         Media, on_delete=models.CASCADE, blank=True, null=True)
     content = models.TextField()
     created = models.DateField(auto_now_add=True)
-    moment_score = models.IntegerField(default=0)
+    entertainment_value_score = models.IntegerField(default=0)
     plot_score = models.IntegerField(default=0)
     characters_score = models.IntegerField(default=0)
     quality_score = models.IntegerField(default=0)
