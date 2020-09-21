@@ -43,7 +43,6 @@ CORS_ORIGIN_WHITELIST = [
     "http://192.168.43.127:3000",
     "http://192.168.43.127",
     "http://192.168.43.127:8000",
-    "elitemanga.net",
     "https://elitemanga.net",
     "https://www.elitemanga.net",
     "www.elitemanga.net",
