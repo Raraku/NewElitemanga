@@ -45,7 +45,7 @@ CORS_ORIGIN_WHITELIST = [
     "http://192.168.43.127:8000",
     "https://elitemanga.net",
     "https://www.elitemanga.net",
-    "www.elitemanga.net",
+
 ]
 
 CSRF_TRUSTED_ORIGINS = [
