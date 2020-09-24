@@ -217,7 +217,10 @@ class ProfileSerializer(serializers.ModelSerializer):
     avatar = serializers.SerializerMethodField()
 
     def get_avatar(self, obj):
-        return str(obj.avatar.url)
+        if obj.avatar:
+            return str(obj.avatar.url)
+        else:
+            return None
 
     class Meta:
         model = Profile
@@ -257,7 +260,10 @@ class ProfileImageSerializer(serializers.ModelSerializer):
     avatar = serializers.SerializerMethodField()
 
     def get_avatar(self, obj):
-        return str(obj.avatar.url)
+        if obj.avatar:
+            return str(obj.avatar.url)
+        else:
+            return None
 
     class Meta:
         model = Profile
