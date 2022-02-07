@@ -1,6 +1,7 @@
 from rest_framework.viewsets import ReadOnlyModelViewSet, ModelViewSet
 from rest_framework import generics
 from django.db.models import Q, F
+import datetime
 from rest_framework.parsers import (
     MultiPartParser,
     FormParser,
@@ -35,6 +36,7 @@ from .models import (
     Announcement,
     Referral,
     Campaign,
+    TodaysPick
 )
 from users.models import Profile
 from .serializers import (
@@ -188,6 +190,18 @@ class MixedViewSetOperations(ReadOnlyModelViewSet):
         media.weekly_reads = F("weekly_reads") + 1
         media.save()
         return Response(status=status.HTTP_201_CREATED)
+
+    @action(detail=False, methods=["get"])
+    def todays_pick(self, request):
+        try:
+            today = datetime.date.today() # date representing today's date
+            today_pick = TodaysPick.objects.get(created_on=today).media
+        except:
+            r1 = random.randint(0, 120)
+            today_pick = Media.objects.all()[r1]
+            TodaysPick.objects.create(media=today_pick)
+        today_pick = MediainfoSerializer(today_pick, context={"request": request})
+        return Response(today_pick.data, status=status.HTTP_200_OK)
 
     @action(detail=False, methods=["get"])
     def get_all_tags(self, request):

@@ -29,7 +29,6 @@ INSTALLED_APPS = [
     "rest_auth.registration",
     "rest_framework",
     "rest_framework.authtoken",
-    "push_notifications",
     "backend.apps.BackendConfig",
     "users.apps.UsersConfig",
     "rest_framework_bulk",

@@ -81,7 +81,7 @@ class MediaAdmin(admin.ModelAdmin):
     list_filter = ("media_type", "rank", "author", "status", "reviewed")
     search_fields = ("title", "keywords")
     prepopulated_fields = {"slug": ("title",)}
-    inlines = [SourceLinkInline, ElitemngaReviewInline]
+    # inlines = [SourceLinkInline, ElitemngaReviewInline]
 
     # def formfield_for_manytomany(self, db_field, request, **kwargs):
     #     if db_field.name == "adaptation":

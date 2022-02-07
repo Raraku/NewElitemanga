@@ -304,3 +304,8 @@ class Referral(models.Model):
     referrals = models.ManyToManyField(
         Profile, related_name="referred", blank=True, related_query_name="referred"
     )
+
+
+class TodaysPick(models.Model):
+    created_on = models.DateField(auto_now_add=True)
+    media = models.ForeignKey(Media, on_delete=models.DO_NOTHING)
